@@ -1,11 +1,467 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Tags on My New Hugo Site</title>
-    <link>http://localhost:1313/tags/</link>
-    <description>Recent content in Tags on My New Hugo Site</description>
-    <generator>Hugo</generator>
+    <title>Tags on Dominic Minischetti</title>
+    <link>http://localhost:1313/blog/tags/</link>
+    <description>Recent content in Tags on Dominic Minischetti</description>
+    <generator>Hugo -- 0.151.0</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 May 2025 09:30:00 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Digital Identity</title>
+      <link>http://localhost:1313/blog/tags/digital-identity/</link>
+      <pubDate>Thu, 15 May 2025 09:30:00 -0400</pubDate>
+      <guid>http://localhost:1313/blog/tags/digital-identity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Geocities</title>
+      <link>http://localhost:1313/blog/tags/geocities/</link>
+      <pubDate>Thu, 15 May 2025 09:30:00 -0400</pubDate>
+      <guid>http://localhost:1313/blog/tags/geocities/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Infinite Scroll</title>
+      <link>http://localhost:1313/blog/tags/infinite-scroll/</link>
+      <pubDate>Thu, 15 May 2025 09:30:00 -0400</pubDate>
+      <guid>http://localhost:1313/blog/tags/infinite-scroll/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Internet History</title>
+      <link>http://localhost:1313/blog/tags/internet-history/</link>
+      <pubDate>Thu, 15 May 2025 09:30:00 -0400</pubDate>
+      <guid>http://localhost:1313/blog/tags/internet-history/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Msn</title>
+      <link>http://localhost:1313/blog/tags/msn/</link>
+      <pubDate>Thu, 15 May 2025 09:30:00 -0400</pubDate>
+      <guid>http://localhost:1313/blog/tags/msn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nostalgia</title>
+      <link>http://localhost:1313/blog/tags/nostalgia/</link>
+      <pubDate>Thu, 15 May 2025 09:30:00 -0400</pubDate>
+      <guid>http://localhost:1313/blog/tags/nostalgia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Rings</title>
+      <link>http://localhost:1313/blog/tags/web-rings/</link>
+      <pubDate>Thu, 15 May 2025 09:30:00 -0400</pubDate>
+      <guid>http://localhost:1313/blog/tags/web-rings/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Predictive Algorithms</title>
+      <link>http://localhost:1313/blog/tags/predictive-algorithms/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/predictive-algorithms/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Privacy</title>
+      <link>http://localhost:1313/blog/tags/privacy/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/privacy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Smart Devices</title>
+      <link>http://localhost:1313/blog/tags/smart-devices/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/smart-devices/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Smartphones</title>
+      <link>http://localhost:1313/blog/tags/smartphones/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/smartphones/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Surveillance</title>
+      <link>http://localhost:1313/blog/tags/surveillance/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/surveillance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Desk Setup</title>
+      <link>http://localhost:1313/blog/tags/desk-setup/</link>
+      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/desk-setup/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Minimalism</title>
+      <link>http://localhost:1313/blog/tags/minimalism/</link>
+      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/minimalism/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Productivity</title>
+      <link>http://localhost:1313/blog/tags/productivity/</link>
+      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/productivity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Remote Work</title>
+      <link>http://localhost:1313/blog/tags/remote-work/</link>
+      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/remote-work/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Workspace</title>
+      <link>http://localhost:1313/blog/tags/workspace/</link>
+      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/workspace/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>BLOX Digital</title>
+      <link>http://localhost:1313/blog/tags/blox-digital/</link>
+      <pubDate>Tue, 01 Apr 2025 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/blox-digital/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>BLOX NXT</title>
+      <link>http://localhost:1313/blog/tags/blox-nxt/</link>
+      <pubDate>Tue, 01 Apr 2025 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/blox-nxt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CMS</title>
+      <link>http://localhost:1313/blog/tags/cms/</link>
+      <pubDate>Tue, 01 Apr 2025 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/cms/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Publishing</title>
+      <link>http://localhost:1313/blog/tags/publishing/</link>
+      <pubDate>Tue, 01 Apr 2025 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/publishing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tech</title>
+      <link>http://localhost:1313/blog/tags/tech/</link>
+      <pubDate>Tue, 01 Apr 2025 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/tech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>File Formats</title>
+      <link>http://localhost:1313/blog/tags/file-formats/</link>
+      <pubDate>Fri, 21 Mar 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/file-formats/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Images</title>
+      <link>http://localhost:1313/blog/tags/images/</link>
+      <pubDate>Fri, 21 Mar 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/images/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PNG vs JPG</title>
+      <link>http://localhost:1313/blog/tags/png-vs-jpg/</link>
+      <pubDate>Fri, 21 Mar 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/png-vs-jpg/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Digital Detox</title>
+      <link>http://localhost:1313/blog/tags/digital-detox/</link>
+      <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/digital-detox/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Personal Reflections</title>
+      <link>http://localhost:1313/blog/tags/personal-reflections/</link>
+      <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/personal-reflections/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Social Media</title>
+      <link>http://localhost:1313/blog/tags/social-media/</link>
+      <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/social-media/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Family</title>
+      <link>http://localhost:1313/blog/tags/family/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/family/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Love</title>
+      <link>http://localhost:1313/blog/tags/love/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/love/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mindset</title>
+      <link>http://localhost:1313/blog/tags/mindset/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/mindset/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Personal Growth</title>
+      <link>http://localhost:1313/blog/tags/personal-growth/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/personal-growth/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Relationships</title>
+      <link>http://localhost:1313/blog/tags/relationships/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/relationships/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Work From Home</title>
+      <link>http://localhost:1313/blog/tags/work-from-home/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/work-from-home/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Digital Tools</title>
+      <link>http://localhost:1313/blog/tags/digital-tools/</link>
+      <pubDate>Fri, 07 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/digital-tools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Notion</title>
+      <link>http://localhost:1313/blog/tags/notion/</link>
+      <pubDate>Fri, 07 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/notion/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Organization</title>
+      <link>http://localhost:1313/blog/tags/organization/</link>
+      <pubDate>Fri, 07 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/organization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Personal Experience</title>
+      <link>http://localhost:1313/blog/tags/personal-experience/</link>
+      <pubDate>Fri, 07 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/personal-experience/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Workflow</title>
+      <link>http://localhost:1313/blog/tags/workflow/</link>
+      <pubDate>Fri, 07 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/workflow/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Coding Humor</title>
+      <link>http://localhost:1313/blog/tags/coding-humor/</link>
+      <pubDate>Fri, 31 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/coding-humor/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Debugging</title>
+      <link>http://localhost:1313/blog/tags/debugging/</link>
+      <pubDate>Fri, 31 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/debugging/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Developer Life</title>
+      <link>http://localhost:1313/blog/tags/developer-life/</link>
+      <pubDate>Fri, 31 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/developer-life/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>http://localhost:1313/blog/tags/programming/</link>
+      <pubDate>Fri, 31 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software Development</title>
+      <link>http://localhost:1313/blog/tags/software-development/</link>
+      <pubDate>Fri, 31 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/software-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Efficiency</title>
+      <link>http://localhost:1313/blog/tags/efficiency/</link>
+      <pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/efficiency/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Focus</title>
+      <link>http://localhost:1313/blog/tags/focus/</link>
+      <pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/focus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Single-Tasking</title>
+      <link>http://localhost:1313/blog/tags/single-tasking/</link>
+      <pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/single-tasking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Analog Tools</title>
+      <link>http://localhost:1313/blog/tags/analog-tools/</link>
+      <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/analog-tools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Problem-Solving</title>
+      <link>http://localhost:1313/blog/tags/problem-solving/</link>
+      <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/problem-solving/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Apps</title>
+      <link>http://localhost:1313/blog/tags/apps/</link>
+      <pubDate>Fri, 13 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/apps/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lifestyle</title>
+      <link>http://localhost:1313/blog/tags/lifestyle/</link>
+      <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/lifestyle/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Personal Philosophy</title>
+      <link>http://localhost:1313/blog/tags/personal-philosophy/</link>
+      <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/personal-philosophy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mental Strategies</title>
+      <link>http://localhost:1313/blog/tags/mental-strategies/</link>
+      <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/mental-strategies/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Browsers</title>
+      <link>http://localhost:1313/blog/tags/browsers/</link>
+      <pubDate>Fri, 22 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/browsers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Development</title>
+      <link>http://localhost:1313/blog/tags/web-development/</link>
+      <pubDate>Fri, 22 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/web-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Habits</title>
+      <link>http://localhost:1313/blog/tags/habits/</link>
+      <pubDate>Fri, 08 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/habits/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Motivation</title>
+      <link>http://localhost:1313/blog/tags/motivation/</link>
+      <pubDate>Fri, 08 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/motivation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Self-Discipline</title>
+      <link>http://localhost:1313/blog/tags/self-discipline/</link>
+      <pubDate>Fri, 08 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/self-discipline/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Critical Thinking</title>
+      <link>http://localhost:1313/blog/tags/critical-thinking/</link>
+      <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/critical-thinking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mental Agility</title>
+      <link>http://localhost:1313/blog/tags/mental-agility/</link>
+      <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/mental-agility/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Self-Awareness</title>
+      <link>http://localhost:1313/blog/tags/self-awareness/</link>
+      <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/self-awareness/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Backpacks</title>
+      <link>http://localhost:1313/blog/tags/backpacks/</link>
+      <pubDate>Fri, 27 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/backpacks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>City Life</title>
+      <link>http://localhost:1313/blog/tags/city-life/</link>
+      <pubDate>Fri, 27 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/city-life/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>New York</title>
+      <link>http://localhost:1313/blog/tags/new-york/</link>
+      <pubDate>Fri, 27 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/new-york/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Product Reviews</title>
+      <link>http://localhost:1313/blog/tags/product-reviews/</link>
+      <pubDate>Fri, 27 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/product-reviews/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

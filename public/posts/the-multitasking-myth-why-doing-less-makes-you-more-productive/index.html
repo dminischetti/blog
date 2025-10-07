@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>The Multitasking Myth: Why Doing Less Makes You More Productive | Dominic Minischetti</title>
+<meta name="keywords" content="efficiency, focus, mindset, personal growth, productivity, single-tasking">
+<meta name="description" content="Multitasking is a lie. Discover why single-tasking is the real productivity superpower and how it’s transforming my focus and life.">
+<meta name="author" content="Dominic Minischetti">
+<link rel="canonical" href="http://localhost:1313/blog/posts/the-multitasking-myth-why-doing-less-makes-you-more-productive/">
+<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.e695482a811f0055648eaa05f439e0f47325e5631175a9f72f9c124d360ff75b.css" integrity="sha256-5pVIKoEfAFVkjqoF9Dng9HMl5WMRdan3L5wSTTYP91s=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/blog/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/posts/the-multitasking-myth-why-doing-less-makes-you-more-productive/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+  (function () {
+    const key = "pref-theme";
+    const defaultTheme = "auto";
+    const stored = localStorage.getItem(key);
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const html = document.documentElement;
+    const dark = stored === "dark" || (!stored && (defaultTheme === "dark" || (defaultTheme === "auto" && prefersDark)));
+    html.classList.toggle("dark", dark);
+  })();
+</script>
+
+
+<header class="header" role="banner">
+  <div class="header-inner">
+      
+      <a href="/blog" class="header-back" aria-label="Back to Blog">
+        <svg class="header-back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+        <span class="header-back-text">Back</span>
+      </a>
+
+    
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+
+<script>
+  (function () {
+    const key = "pref-theme";
+    const defaultTheme = "auto";
+    const btn = document.getElementById("theme-toggle");
+    const html = document.documentElement;
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+
+    if (!btn) return;
+
+    const apply = (theme) => {
+      const dark = theme === "dark";
+      html.classList.toggle("dark", dark);
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    };
+
+    const stored = localStorage.getItem(key);
+    const getPref = () => stored || (defaultTheme === "auto" ? (media.matches ? "dark" : "light") : defaultTheme);
+
+    apply(getPref());
+    if (!stored && defaultTheme === "auto") media.addEventListener("change", e => apply(e.matches ? "dark" : "light"));
+    btn.addEventListener("click", () => {
+      const next = html.classList.contains("dark") ? "light" : "dark";
+      apply(next);
+      localStorage.setItem(key, next);
+    });
+  })();
+</script>
+
+<style>
+   
+  .header-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--theme-text);
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius);
+    background: color-mix(in srgb, var(--theme-bg-secondary) 70%, transparent);
+    border: 1px solid var(--theme-border);
+    transition: all 0.2s ease;
+  }
+
+  .header-back:hover {
+    transform: translateX(-4px);
+    color: var(--theme-primary);
+    border-color: var(--theme-primary-light);
+    background: color-mix(in srgb, var(--theme-primary-light) 10%, var(--theme-bg-secondary));
+  }
+
+  .header-back-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .header-back-text {
+    letter-spacing: -0.01em;
+  }
+
+   
+  .dark .header-back {
+    background: color-mix(in srgb, var(--theme-bg-secondary) 60%, transparent);
+    border-color: var(--theme-border);
+  }
+
+  .dark .header-back:hover {
+    background: color-mix(in srgb, var(--theme-primary-light) 12%, var(--theme-bg-secondary));
+  }
+
+   
+  @media (max-width: 768px) {
+    .header-back {
+      font-size: 0.95rem;
+      padding: 0.5rem 0.9rem;
+      gap: 0.5rem;
+    }
+    .header-back-icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header-back {
+      font-size: 0.9rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: 0.5rem;
+    }
+    .header-back-icon {
+      width: 17px;
+      height: 17px;
+    }
+  }
+</style>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      The Multitasking Myth: Why Doing Less Makes You More Productive
+    </h1>
+    <div class="post-description">
+      Multitasking is a lie. Discover why single-tasking is the real productivity superpower and how it’s transforming my focus and life.
+    </div>
+    <div class="post-meta"><span title='2025-01-24 00:00:00 +0000 UTC'>Jan 24, 2025</span>&nbsp;·&nbsp;<span>Dominic Minischetti</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="http://localhost:1313/blog/images/posts/multitasking-myth-why-doing-less-boosts-productivity.png" alt="">
+        
+</figure>
+  <div class="post-content"><h1 id="the-multitasking-myth-why-doing-less-makes-you-more-productive"><strong>The Multitasking Myth: Why Doing Less Makes You More Productive</strong><a hidden class="anchor" aria-hidden="true" href="#the-multitasking-myth-why-doing-less-makes-you-more-productive">#</a></h1>
+<p>For years, I thought I had <strong>cracked the code</strong> to getting things done.</p>
+<p>I was a multitasker—<strong>a master of spinning plates.</strong></p>
+<p>✔ Answering messages while debugging code.<br>
+✔ Cooking dinner while listening to a tech podcast.<br>
+✔ Planning my week while pushing a stroller.</p>
+<p>I convinced myself this was <strong>peak efficiency</strong>.</p>
+<h3 id="turns-out-i-was-dead-wrong"><strong>Turns out, I was dead wrong.</strong><a hidden class="anchor" aria-hidden="true" href="#turns-out-i-was-dead-wrong">#</a></h3>
+<p>Multitasking isn’t a productivity hack. It’s <strong>a scam</strong>.</p>
+<p>And worse? <strong>It’s been sabotaging my brain for years.</strong></p>
+<hr>
+<h2 id="the-hidden-cost-of-doing-it-all"><strong>The Hidden Cost of Doing It All</strong><a hidden class="anchor" aria-hidden="true" href="#the-hidden-cost-of-doing-it-all">#</a></h2>
+<p>We live in a world that <strong>worships multitasking.</strong></p>
+<p>🖥 Job descriptions praise it.<br>
+📈 Productivity gurus preach it.<br>
+📱 If you’re not multitasking, you’re “falling behind.”</p>
+<p>But science—and <strong>my own experience</strong>—beg to differ.</p>
+<p>Multitasking isn’t <strong>actually</strong> doing two things at once.</p>
+<p>It’s <strong>rapid task-switching</strong>.</p>
+<p>And every time you switch, your brain <strong>pays a price.</strong></p>
+<ul>
+<li><strong>Jumping between Slack messages and writing code?</strong> You’re not doubling your output—you’re introducing micro-delays that slow you down.</li>
+<li><strong>Checking your phone while spending time with family?</strong> You’re mentally buffering between two worlds—never fully present in either.</li>
+</ul>
+<p>I used to think multitasking kept me <strong>ahead</strong>.</p>
+<p>But it was actually the <strong>thing keeping me stuck.</strong></p>
+<p>I was <strong>always busy</strong> but never <em>truly</em> productive.</p>
+<p>Then, I read something that <strong>hit me like a brick:</strong></p>
+<h3 id="the-ability-to-single-task-is-becoming-a-superpower"><strong>“The ability to single-task is becoming a superpower.”</strong><a hidden class="anchor" aria-hidden="true" href="#the-ability-to-single-task-is-becoming-a-superpower">#</a></h3>
+<p>And that’s when <strong>everything changed.</strong></p>
+<hr>
+<h2 id="so-heres-what-im-doing-instead"><strong>So Here’s What I’m Doing Instead</strong><a hidden class="anchor" aria-hidden="true" href="#so-heres-what-im-doing-instead">#</a></h2>
+<p>I’ve started embracing <strong>single-tasking</strong> like my productivity depends on it—<strong>because it does.</strong></p>
+<hr>
+<h3 id="1-time-blocking-20"><strong>1. Time-Blocking 2.0</strong><a hidden class="anchor" aria-hidden="true" href="#1-time-blocking-20">#</a></h3>
+<p>I used to schedule my day <strong>down to the minute</strong>.</p>
+<p>It only made me <strong>stressed</strong> when things didn’t go as planned.</p>
+<p>Now, I align tasks with my <strong>actual energy levels</strong>:<br>
+✔ <strong>High-focus work</strong> when my brain is sharp.<br>
+✔ <strong>Low-focus tasks</strong> when I’m running on fumes.</p>
+<p>It’s about <strong>working with my brain, not against it.</strong></p>
+<hr>
+<h3 id="2-digital-decluttering"><strong>2. Digital Decluttering</strong><a hidden class="anchor" aria-hidden="true" href="#2-digital-decluttering">#</a></h3>
+<p>I used to think a million open tabs meant <strong>I was working hard</strong>.</p>
+<p>Nope.</p>
+<p>It just meant <strong>I was distracted</strong>.</p>
+<p>Now, I:<br>
+✔ <strong>Close unused tabs.</strong><br>
+✔ <strong>Write down what I actually need.</strong><br>
+✔ <strong>Handle tasks <em>one at a time.</em></strong></p>
+<p>If something’s <strong>important</strong>, it goes on my <strong>Notion board</strong>.<br>
+If it’s not? <strong>It’s gone.</strong></p>
+<hr>
+<h3 id="3-the-one-tab-rule"><strong>3. The “One-Tab Rule”</strong><a hidden class="anchor" aria-hidden="true" href="#3-the-one-tab-rule">#</a></h3>
+<p>If my brain <strong>wants a second tab</strong>, it means <strong>I need a second task slot later—not now.</strong></p>
+<p>This was <strong>tough</strong> as a developer.</p>
+<p>I’m used to juggling:<br>
+✔ <strong>Documentation</strong><br>
+✔ <strong>Stack Overflow threads</strong><br>
+✔ <strong>My IDE</strong></p>
+<p>But once I stopped, my <strong>focus got sharper.</strong></p>
+<hr>
+<h3 id="4-thinking-in-depth-not-breadth"><strong>4. Thinking in Depth, Not Breadth</strong><a hidden class="anchor" aria-hidden="true" href="#4-thinking-in-depth-not-breadth">#</a></h3>
+<p>Instead of <strong>half-absorbing</strong> five articles, I <strong>read one properly</strong>—and actually retain something.</p>
+<p>✔ No more <strong>fake productivity.</strong><br>
+✔ No more <strong>information overload.</strong></p>
+<p>The result?<br>
+✔ <strong>Deeper focus.</strong><br>
+✔ <strong>Lower stress.</strong><br>
+✔ <strong>Better work.</strong><br>
+✔ <strong>Actually being present in my own life.</strong></p>
+<hr>
+<h2 id="the-takeaway"><strong>The Takeaway</strong><a hidden class="anchor" aria-hidden="true" href="#the-takeaway">#</a></h2>
+<p>We’ve been sold the lie that <strong>multitasking is the key to success.</strong></p>
+<p>But what if the real key is <strong>the opposite?</strong></p>
+<p>Imagine a world where we:<br>
+✔ Stop bragging about <strong>being busy</strong>.<br>
+✔ Start taking pride in <strong>how well we do one thing at a time.</strong></p>
+<p><strong>Imagine how different life would feel.</strong></p>
+<p>I’m not perfect at it yet.</p>
+<p>I still catch myself <strong>falling back into old habits</strong>:<br>
+✔ Checking messages while pushing code.<br>
+✔ Wanting to read emails while on a Zoom call.</p>
+<p>But now, I <strong>notice it.</strong></p>
+<p>I stop.<br>
+I refocus.</p>
+<p>I’m done with the <strong>chaos.</strong></p>
+<h3 id="are-you"><strong>Are you?</strong><a hidden class="anchor" aria-hidden="true" href="#are-you">#</a></h3>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/blog/tags/efficiency/">Efficiency</a></li>
+      <li><a href="http://localhost:1313/blog/tags/focus/">Focus</a></li>
+      <li><a href="http://localhost:1313/blog/tags/mindset/">Mindset</a></li>
+      <li><a href="http://localhost:1313/blog/tags/personal-growth/">Personal Growth</a></li>
+      <li><a href="http://localhost:1313/blog/tags/productivity/">Productivity</a></li>
+      <li><a href="http://localhost:1313/blog/tags/single-tasking/">Single-Tasking</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/blog/posts/the-7-stages-of-a-developer-fixing-a-bug/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>The 7 Stages of a Developer Fixing a Bug</span>
+  </a>
+  <a class="next" href="http://localhost:1313/blog/posts/how-every-developer-writes-code-whether-they-admit-it-or-not/">
+    <span class="title">Next »</span>
+    <br>
+    <span>How Every Developer Writes Code (Whether They Admit It or Not)</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    <footer class="footer" role="contentinfo">
+  <div class="footer-content">
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        <p>© 2025 <a href="/">Dominic Minischetti</a></p>
+        <p>
+          Building performant, scalable backend systems with precision and care.
+          Crafting fast, reliable PHP solutions since 2012.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer></body>
+
+</html>

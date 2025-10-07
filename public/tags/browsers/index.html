@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Browsers | Dominic Minischetti</title>
+<meta name="keywords" content="">
+<meta name="description" content="Senior PHP Backend Engineer | Performance Optimization Expert">
+<meta name="author" content="Dominic Minischetti">
+<link rel="canonical" href="http://localhost:1313/blog/tags/browsers/">
+<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.e695482a811f0055648eaa05f439e0f47325e5631175a9f72f9c124d360ff75b.css" integrity="sha256-5pVIKoEfAFVkjqoF9Dng9HMl5WMRdan3L5wSTTYP91s=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/blog/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/blog/tags/browsers/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/tags/browsers/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="list" id="top">
+<script>
+  (function () {
+    const key = "pref-theme";
+    const defaultTheme = "auto";
+    const stored = localStorage.getItem(key);
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const html = document.documentElement;
+    const dark = stored === "dark" || (!stored && (defaultTheme === "dark" || (defaultTheme === "auto" && prefersDark)));
+    html.classList.toggle("dark", dark);
+  })();
+</script>
+
+
+<header class="header" role="banner">
+  <div class="header-inner">
+      
+      <a href="/" class="logo" aria-label="Home">
+        <span class="logo-icon">DM</span>
+        <span class="logo-text">Dominic Minischetti</span>
+      </a>
+
+    
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+
+<script>
+  (function () {
+    const key = "pref-theme";
+    const defaultTheme = "auto";
+    const btn = document.getElementById("theme-toggle");
+    const html = document.documentElement;
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+
+    if (!btn) return;
+
+    const apply = (theme) => {
+      const dark = theme === "dark";
+      html.classList.toggle("dark", dark);
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    };
+
+    const stored = localStorage.getItem(key);
+    const getPref = () => stored || (defaultTheme === "auto" ? (media.matches ? "dark" : "light") : defaultTheme);
+
+    apply(getPref());
+    if (!stored && defaultTheme === "auto") media.addEventListener("change", e => apply(e.matches ? "dark" : "light"));
+    btn.addEventListener("click", () => {
+      const next = html.classList.contains("dark") ? "light" : "dark";
+      apply(next);
+      localStorage.setItem(key, next);
+    });
+  })();
+</script>
+
+<style>
+   
+  .header-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--theme-text);
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius);
+    background: color-mix(in srgb, var(--theme-bg-secondary) 70%, transparent);
+    border: 1px solid var(--theme-border);
+    transition: all 0.2s ease;
+  }
+
+  .header-back:hover {
+    transform: translateX(-4px);
+    color: var(--theme-primary);
+    border-color: var(--theme-primary-light);
+    background: color-mix(in srgb, var(--theme-primary-light) 10%, var(--theme-bg-secondary));
+  }
+
+  .header-back-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .header-back-text {
+    letter-spacing: -0.01em;
+  }
+
+   
+  .dark .header-back {
+    background: color-mix(in srgb, var(--theme-bg-secondary) 60%, transparent);
+    border-color: var(--theme-border);
+  }
+
+  .dark .header-back:hover {
+    background: color-mix(in srgb, var(--theme-primary-light) 12%, var(--theme-bg-secondary));
+  }
+
+   
+  @media (max-width: 768px) {
+    .header-back {
+      font-size: 0.95rem;
+      padding: 0.5rem 0.9rem;
+      gap: 0.5rem;
+    }
+    .header-back-icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header-back {
+      font-size: 0.9rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: 0.5rem;
+    }
+    .header-back-icon {
+      width: 17px;
+      height: 17px;
+    }
+  }
+</style>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Browsers
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/blog/images/posts/browser-wars-journey-to-least-annoying-setup.png" alt="">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">The Browser Wars: My Exhausting Journey to Finding the Least Annoying Setup
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I’m a software developer. I build things for the web. I write code.
+I understand how browsers work.
+And yet, somehow, choosing a default browser nearly broke me.
+It wasn’t supposed to be this complicated. It’s just a browser.
+A glorified tab holder. A tool to open Stack Overflow, forget why I opened it, and then open another tab instead.
+But the moment I tried to pick the one—the browser that would rule them all—I descended into a personal crisis so deep I started questioning reality itself.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-11-22 00:00:00 +0000 UTC'>Nov 22, 2024</span>&nbsp;·&nbsp;<span>Dominic Minischetti</span></footer>
+  <a class="entry-link" aria-label="post link to The Browser Wars: My Exhausting Journey to Finding the Least Annoying Setup" href="http://localhost:1313/blog/posts/the-browser-wars-my-exhausting-journey-to-finding-the-least-annoying-setup/"></a>
+</article>
+    </main>
+    <footer class="footer" role="contentinfo">
+  <div class="footer-content">
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        <p>© 2025 <a href="/">Dominic Minischetti</a></p>
+        <p>
+          Building performant, scalable backend systems with precision and care.
+          Crafting fast, reliable PHP solutions since 2012.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer></body>
+
+</html>

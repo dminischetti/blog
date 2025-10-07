@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Focus on Dominic Minischetti</title>
+    <link>http://localhost:1313/blog/tags/focus/</link>
+    <description>Recent content in Focus on Dominic Minischetti</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/focus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Multitasking Myth: Why Doing Less Makes You More Productive</title>
+      <link>http://localhost:1313/blog/posts/the-multitasking-myth-why-doing-less-makes-you-more-productive/</link>
+      <pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/the-multitasking-myth-why-doing-less-makes-you-more-productive/</guid>
+      <description>Multitasking is a lie. Discover why single-tasking is the real productivity superpower and how it’s transforming my focus and life.</description>
+    </item>
+    <item>
+      <title>The Productivity Trap: Why Doing More Is Keeping You Stuck</title>
+      <link>http://localhost:1313/blog/posts/the-productivity-trap-why-doing-more-is-keeping-you-stuck/</link>
+      <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/the-productivity-trap-why-doing-more-is-keeping-you-stuck/</guid>
+      <description>Productivity isn’t about doing more—it’s about doing what matters. Discover how to escape the productivity trap and find real progress.</description>
+    </item>
+    <item>
+      <title>How I Outsmart My Own Brain to Get Things Done</title>
+      <link>http://localhost:1313/blog/posts/how-i-outsmart-my-own-brain-to-get-things-done/</link>
+      <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/how-i-outsmart-my-own-brain-to-get-things-done/</guid>
+      <description>Life feels like an action movie with no pause button. Here&amp;#39;s how I handle the chaos and still get things done.</description>
+    </item>
+  </channel>
+</rss>

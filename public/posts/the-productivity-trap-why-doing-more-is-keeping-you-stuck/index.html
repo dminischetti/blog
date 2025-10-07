@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>The Productivity Trap: Why Doing More Is Keeping You Stuck | Dominic Minischetti</title>
+<meta name="keywords" content="efficiency, focus, mindset, minimalism, personal growth, productivity">
+<meta name="description" content="Productivity isn’t about doing more—it’s about doing what matters. Discover how to escape the productivity trap and find real progress.">
+<meta name="author" content="Dominic Minischetti">
+<link rel="canonical" href="http://localhost:1313/blog/posts/the-productivity-trap-why-doing-more-is-keeping-you-stuck/">
+<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.e695482a811f0055648eaa05f439e0f47325e5631175a9f72f9c124d360ff75b.css" integrity="sha256-5pVIKoEfAFVkjqoF9Dng9HMl5WMRdan3L5wSTTYP91s=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/blog/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/posts/the-productivity-trap-why-doing-more-is-keeping-you-stuck/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+  (function () {
+    const key = "pref-theme";
+    const defaultTheme = "auto";
+    const stored = localStorage.getItem(key);
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const html = document.documentElement;
+    const dark = stored === "dark" || (!stored && (defaultTheme === "dark" || (defaultTheme === "auto" && prefersDark)));
+    html.classList.toggle("dark", dark);
+  })();
+</script>
+
+
+<header class="header" role="banner">
+  <div class="header-inner">
+      
+      <a href="/blog" class="header-back" aria-label="Back to Blog">
+        <svg class="header-back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+        <span class="header-back-text">Back</span>
+      </a>
+
+    
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+
+<script>
+  (function () {
+    const key = "pref-theme";
+    const defaultTheme = "auto";
+    const btn = document.getElementById("theme-toggle");
+    const html = document.documentElement;
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+
+    if (!btn) return;
+
+    const apply = (theme) => {
+      const dark = theme === "dark";
+      html.classList.toggle("dark", dark);
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    };
+
+    const stored = localStorage.getItem(key);
+    const getPref = () => stored || (defaultTheme === "auto" ? (media.matches ? "dark" : "light") : defaultTheme);
+
+    apply(getPref());
+    if (!stored && defaultTheme === "auto") media.addEventListener("change", e => apply(e.matches ? "dark" : "light"));
+    btn.addEventListener("click", () => {
+      const next = html.classList.contains("dark") ? "light" : "dark";
+      apply(next);
+      localStorage.setItem(key, next);
+    });
+  })();
+</script>
+
+<style>
+   
+  .header-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--theme-text);
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius);
+    background: color-mix(in srgb, var(--theme-bg-secondary) 70%, transparent);
+    border: 1px solid var(--theme-border);
+    transition: all 0.2s ease;
+  }
+
+  .header-back:hover {
+    transform: translateX(-4px);
+    color: var(--theme-primary);
+    border-color: var(--theme-primary-light);
+    background: color-mix(in srgb, var(--theme-primary-light) 10%, var(--theme-bg-secondary));
+  }
+
+  .header-back-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .header-back-text {
+    letter-spacing: -0.01em;
+  }
+
+   
+  .dark .header-back {
+    background: color-mix(in srgb, var(--theme-bg-secondary) 60%, transparent);
+    border-color: var(--theme-border);
+  }
+
+  .dark .header-back:hover {
+    background: color-mix(in srgb, var(--theme-primary-light) 12%, var(--theme-bg-secondary));
+  }
+
+   
+  @media (max-width: 768px) {
+    .header-back {
+      font-size: 0.95rem;
+      padding: 0.5rem 0.9rem;
+      gap: 0.5rem;
+    }
+    .header-back-icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header-back {
+      font-size: 0.9rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: 0.5rem;
+    }
+    .header-back-icon {
+      width: 17px;
+      height: 17px;
+    }
+  }
+</style>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      The Productivity Trap: Why Doing More Is Keeping You Stuck
+    </h1>
+    <div class="post-description">
+      Productivity isn’t about doing more—it’s about doing what matters. Discover how to escape the productivity trap and find real progress.
+    </div>
+    <div class="post-meta"><span title='2025-01-03 00:00:00 +0000 UTC'>Jan 3, 2025</span>&nbsp;·&nbsp;<span>Dominic Minischetti</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="http://localhost:1313/blog/images/posts/productivity-trap-why-doing-more-keeps-you-stuck.png" alt="">
+        
+</figure>
+  <div class="post-content"><h1 id="the-productivity-trap-why-doing-more-is-keeping-you-stuck"><strong>The Productivity Trap: Why Doing More Is Keeping You Stuck</strong><a hidden class="anchor" aria-hidden="true" href="#the-productivity-trap-why-doing-more-is-keeping-you-stuck">#</a></h1>
+<p>For years, I thought <strong>productivity was about doing more.</strong></p>
+<p>✔ More tasks.<br>
+✔ More efficiency.<br>
+✔ More checkboxes.</p>
+<p>If I wasn’t constantly <strong>optimizing, planning, and squeezing every second</strong> for maximum output, I was failing.</p>
+<p>And at first? <strong>It worked.</strong></p>
+<p>I was getting things done. My to-do list was long, and I was checking off items like a machine.</p>
+<p>But then something strange happened.</p>
+<p>Despite all my so-called <strong>productivity</strong>, I felt like I was going <strong>nowhere.</strong></p>
+<p>❌ <strong>Busy, but not fulfilled.</strong><br>
+❌ <strong>Efficient, but not effective.</strong><br>
+❌ <strong>Always working, but never actually moving forward.</strong></p>
+<p>And that’s when I realized: <strong>The way we think about productivity is broken.</strong></p>
+<hr>
+<h2 id="the-false-promise-of-getting-more-done"><strong>The False Promise of “Getting More Done”</strong><a hidden class="anchor" aria-hidden="true" href="#the-false-promise-of-getting-more-done">#</a></h2>
+<p>Somewhere along the way, we all bought into a <strong>lie</strong>:</p>
+<p>🛑 That the key to success is <strong>efficiency</strong>.<br>
+🛑 That if we just optimize our time <strong>perfectly</strong>, automate enough tasks, and use the right tools, we’ll finally get ahead.</p>
+<p>But here’s the truth:</p>
+<h3 id="productivity-is-not-about-getting-more-things-done-its-about-getting-the"><strong>Productivity is not about getting more things done. It’s about getting the <em>right</em> things done.</strong><a hidden class="anchor" aria-hidden="true" href="#productivity-is-not-about-getting-more-things-done-its-about-getting-the">#</a></h3>
+<p>And if you’re not careful, <strong>“being productive” can actually become the biggest distraction from what really matters.</strong></p>
+<p>I call it <strong>The Productivity Trap.</strong></p>
+<hr>
+<h2 id="how-the-productivity-trap-works"><strong>How The Productivity Trap Works</strong><a hidden class="anchor" aria-hidden="true" href="#how-the-productivity-trap-works">#</a></h2>
+<p>This is how most people approach work:</p>
+<p>1️⃣ <strong>You feel overwhelmed.</strong> Too much to do, not enough time.<br>
+2️⃣ <strong>You try to optimize.</strong> Time-blocking, automation, and hacks to squeeze more out of your day.<br>
+3️⃣ <strong>You get efficient&hellip; at the wrong things.</strong> Answering emails faster, handling meetings smoother, but none of it actually <em>matters.</em><br>
+4️⃣ <strong>You stay stuck in a loop of busyness.</strong> Always “doing,” never really progressing.</p>
+<p>This is the scary part:</p>
+<h3 id="productivity-can-feel-like-progress-even-when-its-just-motion"><strong>Productivity can feel like progress, even when it’s just motion.</strong><a hidden class="anchor" aria-hidden="true" href="#productivity-can-feel-like-progress-even-when-its-just-motion">#</a></h3>
+<p>And that’s exactly how I got stuck for so long.</p>
+<p>I was <strong>checking boxes but not moving forward</strong>.<br>
+I was <strong>working hard but not working smart</strong>.<br>
+I was <strong>busy—but not productive.</strong></p>
+<hr>
+<h2 id="the-real-secret-to-productivity-subtraction-not-addition"><strong>The Real Secret to Productivity: Subtraction, Not Addition</strong><a hidden class="anchor" aria-hidden="true" href="#the-real-secret-to-productivity-subtraction-not-addition">#</a></h2>
+<p>I used to ask myself:</p>
+<blockquote>
+<p><em>&ldquo;How can I fit more into my day?&rdquo;</em></p></blockquote>
+<p>Now, I ask a <strong>better</strong> question:</p>
+<blockquote>
+<p><strong>&ldquo;What can I remove?&rdquo;</strong></p></blockquote>
+<p>Real productivity isn’t about <strong>adding</strong> more tasks.</p>
+<p>It’s about:<br>
+✔ <strong>Eliminating distractions.</strong><br>
+✔ <strong>Cutting useless work.</strong><br>
+✔ <strong>Focusing on what actually moves the needle.</strong></p>
+<p>Here’s how I flipped my mindset:</p>
+<hr>
+<h3 id="1-stop-optimizing-the-unimportant"><strong>1. Stop Optimizing the Unimportant</strong><a hidden class="anchor" aria-hidden="true" href="#1-stop-optimizing-the-unimportant">#</a></h3>
+<p>I used to spend <strong>hours</strong> tweaking my task manager, perfecting my schedule, and fine-tuning my workflow.</p>
+<p>It felt productive, but in reality? <strong>It was just procrastination in disguise.</strong></p>
+<p>Now, I ask:</p>
+<ul>
+<li><em>Does this task even matter?</em></li>
+<li><em>Will this move me forward, or just make me feel busy?</em></li>
+</ul>
+<p>Most of the time, the best way to <strong>be more productive</strong> is to <strong>stop doing half the things you’re doing right now.</strong></p>
+<hr>
+<h3 id="2-the-8020-focus-shift"><strong>2. The 80/20 Focus Shift</strong><a hidden class="anchor" aria-hidden="true" href="#2-the-8020-focus-shift">#</a></h3>
+<p>The <strong>Pareto Principle</strong> says <strong>80% of results come from 20% of effort.</strong></p>
+<p>But most of us spend time on the <strong>80% of tasks</strong> that don’t actually move the needle.</p>
+<p>So instead of asking:</p>
+<blockquote>
+<p><em>&ldquo;How can I do more?&rdquo;</em></p></blockquote>
+<p>I ask:<br>
+✔ <em>What’s the 20% that will make the biggest impact?</em><br>
+✔ <em>What can I cut without any real consequence?</em></p>
+<p>Then, I <strong>ruthlessly</strong> focus on the <strong>high-impact 20%</strong>—and let go of the rest.</p>
+<p>This was a game-changer for me. It’s not about <strong>doing everything</strong>. It’s about doing <strong>the right things.</strong></p>
+<hr>
+<h3 id="3-single-tasking-the-real-superpower"><strong>3. Single-Tasking: The Real Superpower</strong><a hidden class="anchor" aria-hidden="true" href="#3-single-tasking-the-real-superpower">#</a></h3>
+<p>I used to <strong>pride myself on multitasking.</strong></p>
+<p>But <strong>multitasking isn’t working faster—it’s working worse.</strong></p>
+<p>It’s just rapidly <strong>switching between tasks</strong>, losing focus each time.</p>
+<p>Now, I do the opposite:</p>
+<p>✔ <strong>One tab at a time.</strong> No distractions.<br>
+✔ <strong>One task at a time.</strong> Full focus, deep work.<br>
+✔ <strong>One decision at a time.</strong> No jumping back and forth.</p>
+<p>It <strong>feels</strong> slower, but in reality? <strong>It’s 10x more effective.</strong></p>
+<hr>
+<h3 id="4-the-do-less-but-better-rule"><strong>4. The “Do Less, But Better” Rule</strong><a hidden class="anchor" aria-hidden="true" href="#4-the-do-less-but-better-rule">#</a></h3>
+<p>Most people try to do everything <strong>at 70% effort.</strong></p>
+<p>They spread themselves too thin, and their work <strong>suffers.</strong></p>
+<p>But the real magic happens when you:</p>
+<p>✔ Do <strong>fewer</strong> things, but do them <strong>exceptionally well.</strong><br>
+✔ Say <strong>no</strong> to everything that doesn’t align with your goals.<br>
+✔ Focus on <strong>quality over quantity.</strong></p>
+<p>Ironically, by <strong>doing less, you achieve more.</strong></p>
+<hr>
+<h2 id="the-takeaway-stop-measuring-productivity-by-output"><strong>The Takeaway: Stop Measuring Productivity by Output</strong><a hidden class="anchor" aria-hidden="true" href="#the-takeaway-stop-measuring-productivity-by-output">#</a></h2>
+<p>The biggest shift I made?</p>
+<p>I stopped measuring productivity by <strong>how much I do.</strong></p>
+<p>Instead, I measure it by:</p>
+<p>✔ <strong>How much progress I make on things that actually matter.</strong><br>
+✔ <strong>How much energy I have left at the end of the day.</strong><br>
+✔ <strong>How much freedom I create for myself by removing unnecessary work.</strong></p>
+<p>I stopped asking:</p>
+<blockquote>
+<p><em>&ldquo;How can I do more?&rdquo;</em></p></blockquote>
+<p>And started asking:</p>
+<blockquote>
+<p><strong>&ldquo;How can I do less, but better?&rdquo;</strong></p></blockquote>
+<hr>
+<h2 id="if-youre-feeling-stuck-try-this"><strong>If You’re Feeling Stuck, Try This</strong><a hidden class="anchor" aria-hidden="true" href="#if-youre-feeling-stuck-try-this">#</a></h2>
+<p>If you’ve been <strong>optimizing, planning, and working harder</strong>—but still feel stuck?</p>
+<p>Try the <strong>opposite.</strong></p>
+<p>✔ Instead of doing more, <strong>do less—strategically.</strong><br>
+✔ Instead of working harder, <strong>work on the right things.</strong><br>
+✔ Instead of chasing efficiency, <strong>chase clarity.</strong></p>
+<p>Because <strong>the most productive people</strong> aren’t the ones who get the most done.</p>
+<p>They’re the ones who <strong>do what matters—and ignore everything else.</strong></p>
+<p>That’s the secret.</p>
+<p>It’s not about <strong>doing more.</strong><br>
+It’s about <strong>doing less—but doing it better.</strong></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/blog/tags/efficiency/">Efficiency</a></li>
+      <li><a href="http://localhost:1313/blog/tags/focus/">Focus</a></li>
+      <li><a href="http://localhost:1313/blog/tags/mindset/">Mindset</a></li>
+      <li><a href="http://localhost:1313/blog/tags/minimalism/">Minimalism</a></li>
+      <li><a href="http://localhost:1313/blog/tags/personal-growth/">Personal Growth</a></li>
+      <li><a href="http://localhost:1313/blog/tags/productivity/">Productivity</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/blog/posts/how-every-developer-writes-code-whether-they-admit-it-or-not/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>How Every Developer Writes Code (Whether They Admit It or Not)</span>
+  </a>
+  <a class="next" href="http://localhost:1313/blog/posts/why-i-a-programmer-still-use-paper-like-its-1999/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Why I, a Programmer, Still Use Paper Like It’s 1999</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    <footer class="footer" role="contentinfo">
+  <div class="footer-content">
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        <p>© 2025 <a href="/">Dominic Minischetti</a></p>
+        <p>
+          Building performant, scalable backend systems with precision and care.
+          Crafting fast, reliable PHP solutions since 2012.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer></body>
+
+</html>

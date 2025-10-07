@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>BLOX NXT on Dominic Minischetti</title>
+    <link>http://localhost:1313/blog/tags/blox-nxt/</link>
+    <description>Recent content in BLOX NXT on Dominic Minischetti</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Apr 2025 09:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/blox-nxt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How a CMS Can Make or Break Digital Publishing (And Why I’m All In with BLOX)</title>
+      <link>http://localhost:1313/blog/posts/how-a-cms-can-make-or-break-digital-publishing-and-why-im-all-in-with-blox/</link>
+      <pubDate>Tue, 01 Apr 2025 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/how-a-cms-can-make-or-break-digital-publishing-and-why-im-all-in-with-blox/</guid>
+      <description>A look at why a great CMS is essential for digital publishing, how BLOX Digital is leading the way, and why I&amp;#39;m excited about BLOX NXT.</description>
+    </item>
+  </channel>
+</rss>

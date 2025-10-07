@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Personal Growth on Dominic Minischetti</title>
+    <link>http://localhost:1313/blog/tags/personal-growth/</link>
+    <description>Recent content in Personal Growth on Dominic Minischetti</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/personal-growth/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Love Notes (and Bugs) in the Silence of Home</title>
+      <link>http://localhost:1313/blog/posts/love-notes-and-bugs-in-the-silence-of-home/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/love-notes-and-bugs-in-the-silence-of-home/</guid>
+      <description>A love story told in the quiet moments of working from home together.</description>
+    </item>
+    <item>
+      <title>The Multitasking Myth: Why Doing Less Makes You More Productive</title>
+      <link>http://localhost:1313/blog/posts/the-multitasking-myth-why-doing-less-makes-you-more-productive/</link>
+      <pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/the-multitasking-myth-why-doing-less-makes-you-more-productive/</guid>
+      <description>Multitasking is a lie. Discover why single-tasking is the real productivity superpower and how it’s transforming my focus and life.</description>
+    </item>
+    <item>
+      <title>The Productivity Trap: Why Doing More Is Keeping You Stuck</title>
+      <link>http://localhost:1313/blog/posts/the-productivity-trap-why-doing-more-is-keeping-you-stuck/</link>
+      <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/the-productivity-trap-why-doing-more-is-keeping-you-stuck/</guid>
+      <description>Productivity isn’t about doing more—it’s about doing what matters. Discover how to escape the productivity trap and find real progress.</description>
+    </item>
+    <item>
+      <title>The Motivation Myth: Why Waiting to Feel Inspired Will Keep You Stuck</title>
+      <link>http://localhost:1313/blog/posts/the-motivation-myth-why-waiting-to-feel-inspired-will-keep-you-stuck/</link>
+      <pubDate>Fri, 08 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/the-motivation-myth-why-waiting-to-feel-inspired-will-keep-you-stuck/</guid>
+      <description>Motivation is a lie. Discover why waiting to feel inspired keeps you stuck and learn practical strategies to take action anyway.</description>
+    </item>
+    <item>
+      <title>Why Changing Your Mind is a Sign of Intelligence, Not Weakness</title>
+      <link>http://localhost:1313/blog/posts/why-changing-your-mind-is-a-sign-of-intelligence-not-weakness/</link>
+      <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/why-changing-your-mind-is-a-sign-of-intelligence-not-weakness/</guid>
+      <description>Changing your mind isn’t a weakness—it’s growth. Discover why evolving your perspective makes you smarter and more adaptable.</description>
+    </item>
+  </channel>
+</rss>

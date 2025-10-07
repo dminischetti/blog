@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>The Internet Was Once a Place | Dominic Minischetti</title>
+<meta name="keywords" content="old internet nostalgia, geocities memories, early web, msn icq myspace, digital minimalism, infinite scroll, guestbooks and web rings">
+<meta name="description" content="There was a time when the internet felt like a place. With doors. With people. With warmth. A personal reflection on what we lost, and what we can still rebuild.">
+<meta name="author" content="Dominic Minischetti">
+<link rel="canonical" href="http://localhost:1313/blog/posts/the-internet-was-once-a-place/">
+<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.e695482a811f0055648eaa05f439e0f47325e5631175a9f72f9c124d360ff75b.css" integrity="sha256-5pVIKoEfAFVkjqoF9Dng9HMl5WMRdan3L5wSTTYP91s=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/blog/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/posts/the-internet-was-once-a-place/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+  (function () {
+    const key = "pref-theme";
+    const defaultTheme = "auto";
+    const stored = localStorage.getItem(key);
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const html = document.documentElement;
+    const dark = stored === "dark" || (!stored && (defaultTheme === "dark" || (defaultTheme === "auto" && prefersDark)));
+    html.classList.toggle("dark", dark);
+  })();
+</script>
+
+
+<header class="header" role="banner">
+  <div class="header-inner">
+      
+      <a href="/blog" class="header-back" aria-label="Back to Blog">
+        <svg class="header-back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+        <span class="header-back-text">Back</span>
+      </a>
+
+    
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+
+<script>
+  (function () {
+    const key = "pref-theme";
+    const defaultTheme = "auto";
+    const btn = document.getElementById("theme-toggle");
+    const html = document.documentElement;
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+
+    if (!btn) return;
+
+    const apply = (theme) => {
+      const dark = theme === "dark";
+      html.classList.toggle("dark", dark);
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    };
+
+    const stored = localStorage.getItem(key);
+    const getPref = () => stored || (defaultTheme === "auto" ? (media.matches ? "dark" : "light") : defaultTheme);
+
+    apply(getPref());
+    if (!stored && defaultTheme === "auto") media.addEventListener("change", e => apply(e.matches ? "dark" : "light"));
+    btn.addEventListener("click", () => {
+      const next = html.classList.contains("dark") ? "light" : "dark";
+      apply(next);
+      localStorage.setItem(key, next);
+    });
+  })();
+</script>
+
+<style>
+   
+  .header-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--theme-text);
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius);
+    background: color-mix(in srgb, var(--theme-bg-secondary) 70%, transparent);
+    border: 1px solid var(--theme-border);
+    transition: all 0.2s ease;
+  }
+
+  .header-back:hover {
+    transform: translateX(-4px);
+    color: var(--theme-primary);
+    border-color: var(--theme-primary-light);
+    background: color-mix(in srgb, var(--theme-primary-light) 10%, var(--theme-bg-secondary));
+  }
+
+  .header-back-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .header-back-text {
+    letter-spacing: -0.01em;
+  }
+
+   
+  .dark .header-back {
+    background: color-mix(in srgb, var(--theme-bg-secondary) 60%, transparent);
+    border-color: var(--theme-border);
+  }
+
+  .dark .header-back:hover {
+    background: color-mix(in srgb, var(--theme-primary-light) 12%, var(--theme-bg-secondary));
+  }
+
+   
+  @media (max-width: 768px) {
+    .header-back {
+      font-size: 0.95rem;
+      padding: 0.5rem 0.9rem;
+      gap: 0.5rem;
+    }
+    .header-back-icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header-back {
+      font-size: 0.9rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: 0.5rem;
+    }
+    .header-back-icon {
+      width: 17px;
+      height: 17px;
+    }
+  }
+</style>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      The Internet Was Once a Place
+    </h1>
+    <div class="post-description">
+      There was a time when the internet felt like a place. With doors. With people. With warmth. A personal reflection on what we lost, and what we can still rebuild.
+    </div>
+    <div class="post-meta"><span title='2025-05-15 09:30:00 -0400 EDT'>May 15, 2025</span>&nbsp;·&nbsp;<span>Dominic Minischetti</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="http://localhost:1313/blog/images/posts/the-internet-was-once-a-place.png" alt="">
+        
+</figure>
+  <div class="post-content"><p>Once, there was a door.<br>
+A real one. With a handle and a key.<br>
+It was the door of the room where the computer lived.</p>
+<p>Big wooden desk. A mess of floppy disks, CDs and cables.
+After school, I’d drop my backpack by the door and run at it. I had 30 minutes.<br>
+Thirty minutes of freedom, after begging for them like it was a matter of life or death.</p>
+<p>The modem screamed—those weird, broken sounds.<br>
+But to me, that noise meant magic.<br>
+It meant I was going somewhere else.</p>
+<p><strong>MSN connected. ICQ went “uh-oh.”</strong><br>
+Later, there was <strong>MySpace</strong>, with its messy, glittery pages.<br>
+But back then, those first chats felt like stepping into a secret world.</p>
+<p>I wasn&rsquo;t popular at school. I wasn’t the funny one, even if I tried.<br>
+But online, I was just… me.</p>
+<p>I talked to people I didn’t know. People who knew nothing about me, but cared.<br>
+Sometimes we only shared a song.<br>
+Or a stupid meme. Or just… silence.<br>
+But it meant something.</p>
+<p>Then, always the same voice from the other room:<br>
+“Dominic, that’s enough for today.”<br>
+or worse
+“Dominic, I need to use the phone!”</p>
+<p>The screen went black. MSN disconnected.<br>
+I closed the door behind me.<br>
+And that was it.</p>
+<p>But that gesture—leaving the room—meant something.<br>
+And some part of me always stayed behind, on the other side of that door.</p>
+<hr>
+<h2 id="when-the-internet-had-a-soul">When the Internet Had a Soul<a hidden class="anchor" aria-hidden="true" href="#when-the-internet-had-a-soul">#</a></h2>
+<p>Yes, it was a bit dangerous.<br>
+But it was also beautiful.<br>
+There was this feeling—clean, honest.<br>
+Not everything made sense, but it didn’t need to.</p>
+<p>We had no real names. No selfies.<br>
+Just our words. Just our minds.<br>
+Just us.</p>
+<p>None of those people are still in my life.<br>
+They&rsquo;ve all disappeared.<br>
+I’ve tried to find them. I really tried.<br>
+But it’s like chasing a ghost.</p>
+<hr>
+<h2 id="geocities-web-rings-and-digital-neighborhoods">Geocities, Web Rings, and Digital Neighborhoods<a hidden class="anchor" aria-hidden="true" href="#geocities-web-rings-and-digital-neighborhoods">#</a></h2>
+<p>Geocities was home.<br>
+You had your own address.<br>
+You picked a neighborhood. Area51 if you liked sci-fi. West Hollywood if you were queer.<br>
+Every page had visitor counters, blinking stars, maybe some MIDI music in the background.</p>
+<p>And then there were Web Rings.<br>
+Tiny sites linked together by shared love for something—anything.<br>
+Aliens, Sailor Moon, your favorite band.</p>
+<p>You didn’t scroll back then.<br>
+You clicked. You chose where to go next.</p>
+<p>It felt like being in a living room.<br>
+People sat around a digital table and said:<br>
+“Look, this is what I love. What about you?”</p>
+<p>Then Yahoo came.<br>
+Bought Geocities.<br>
+And started deleting things.<br>
+Just like that.</p>
+<p>More than 1,000 people, erased overnight.<br>
+No warning. No respect.</p>
+<p>And like that, a part of the internet died.</p>
+<hr>
+<h2 id="the-infinite-scroll-and-the-empty-field">The Infinite Scroll and the Empty Field<a hidden class="anchor" aria-hidden="true" href="#the-infinite-scroll-and-the-empty-field">#</a></h2>
+<p>Then came infinite scroll.<br>
+And now… it’s just this.<br>
+An endless gray field. No direction. No ending.</p>
+<p>You scroll. You scroll more.<br>
+And when you close your phone, you don’t feel full.<br>
+You feel… hollow.</p>
+<p>Sometimes it feels like I’m being watched.<br>
+I turn around. There’s nothing there.<br>
+But I feel it.<br>
+Something breathing behind me.</p>
+<hr>
+<h2 id="hope-rebuilding-the-door">Hope: Rebuilding the Door<a hidden class="anchor" aria-hidden="true" href="#hope-rebuilding-the-door">#</a></h2>
+<p>But something inside me still believes.<br>
+That it’s not over.<br>
+That there’s a way back.</p>
+<p>Somewhere in the corners of the web, people are still making weird little things.<br>
+Personal websites. Handmade code. Thoughts that don&rsquo;t fit anywhere.</p>
+<p>No algorithms. No strategy. Just love.<br>
+Like drawing on the back of your notebook just because you feel like it.</p>
+<p>Maybe that’s where we start again.<br>
+Not from tech. Not from progress.<br>
+From the threshold. From the doorway.</p>
+<p>Maybe we can put the door back.<br>
+Between us and the chaos.<br>
+Between us and the feed.</p>
+<hr>
+<h2 id="memory-is-not-death-its-a-root">Memory Is Not Death. It’s a Root.<a hidden class="anchor" aria-hidden="true" href="#memory-is-not-death-its-a-root">#</a></h2>
+<p>Yes, I’m nostalgic.<br>
+But this isn’t about sadness.<br>
+It’s about memory.<br>
+And memory, if you let it, becomes a map.</p>
+<p>I spent hours exploring frozen websites.<br>
+And when a page in Hypnospace suddenly updated, I jumped.<br>
+Because I had forgotten what it felt like.<br>
+The internet reacting.<br>
+Caring. Being alive.</p>
+<p>So no, not everything is gone.<br>
+Those doors still exist.<br>
+Those neighborhoods. Those communities.</p>
+<p>We just need to remember how to find them.<br>
+And have the courage to build a home again.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/blog/tags/nostalgia/">Nostalgia</a></li>
+      <li><a href="http://localhost:1313/blog/tags/internet-history/">Internet History</a></li>
+      <li><a href="http://localhost:1313/blog/tags/geocities/">Geocities</a></li>
+      <li><a href="http://localhost:1313/blog/tags/web-rings/">Web Rings</a></li>
+      <li><a href="http://localhost:1313/blog/tags/msn/">Msn</a></li>
+      <li><a href="http://localhost:1313/blog/tags/digital-identity/">Digital Identity</a></li>
+      <li><a href="http://localhost:1313/blog/tags/infinite-scroll/">Infinite Scroll</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="next" href="http://localhost:1313/blog/posts/your-phone-isnt-spying-but-the-truth-is-worse/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Your Phone Isn’t Spying — But the Truth Is Worse</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    <footer class="footer" role="contentinfo">
+  <div class="footer-content">
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        <p>© 2025 <a href="/">Dominic Minischetti</a></p>
+        <p>
+          Building performant, scalable backend systems with precision and care.
+          Crafting fast, reliable PHP solutions since 2012.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer></body>
+
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>The 7 Stages of a Developer Fixing a Bug | Dominic Minischetti</title>
+<meta name="keywords" content="coding humor, debugging, developer life, programming, software development, tech">
+<meta name="description" content="Fixing a bug isn’t just about code—it’s an emotional rollercoaster. Discover the 7 stages every developer goes through while debugging.">
+<meta name="author" content="Dominic Minischetti">
+<link rel="canonical" href="http://localhost:1313/blog/posts/the-7-stages-of-a-developer-fixing-a-bug/">
+<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.e695482a811f0055648eaa05f439e0f47325e5631175a9f72f9c124d360ff75b.css" integrity="sha256-5pVIKoEfAFVkjqoF9Dng9HMl5WMRdan3L5wSTTYP91s=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/blog/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/posts/the-7-stages-of-a-developer-fixing-a-bug/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+  (function () {
+    const key = "pref-theme";
+    const defaultTheme = "auto";
+    const stored = localStorage.getItem(key);
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const html = document.documentElement;
+    const dark = stored === "dark" || (!stored && (defaultTheme === "dark" || (defaultTheme === "auto" && prefersDark)));
+    html.classList.toggle("dark", dark);
+  })();
+</script>
+
+
+<header class="header" role="banner">
+  <div class="header-inner">
+      
+      <a href="/blog" class="header-back" aria-label="Back to Blog">
+        <svg class="header-back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+        <span class="header-back-text">Back</span>
+      </a>
+
+    
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+
+<script>
+  (function () {
+    const key = "pref-theme";
+    const defaultTheme = "auto";
+    const btn = document.getElementById("theme-toggle");
+    const html = document.documentElement;
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+
+    if (!btn) return;
+
+    const apply = (theme) => {
+      const dark = theme === "dark";
+      html.classList.toggle("dark", dark);
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    };
+
+    const stored = localStorage.getItem(key);
+    const getPref = () => stored || (defaultTheme === "auto" ? (media.matches ? "dark" : "light") : defaultTheme);
+
+    apply(getPref());
+    if (!stored && defaultTheme === "auto") media.addEventListener("change", e => apply(e.matches ? "dark" : "light"));
+    btn.addEventListener("click", () => {
+      const next = html.classList.contains("dark") ? "light" : "dark";
+      apply(next);
+      localStorage.setItem(key, next);
+    });
+  })();
+</script>
+
+<style>
+   
+  .header-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--theme-text);
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius);
+    background: color-mix(in srgb, var(--theme-bg-secondary) 70%, transparent);
+    border: 1px solid var(--theme-border);
+    transition: all 0.2s ease;
+  }
+
+  .header-back:hover {
+    transform: translateX(-4px);
+    color: var(--theme-primary);
+    border-color: var(--theme-primary-light);
+    background: color-mix(in srgb, var(--theme-primary-light) 10%, var(--theme-bg-secondary));
+  }
+
+  .header-back-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .header-back-text {
+    letter-spacing: -0.01em;
+  }
+
+   
+  .dark .header-back {
+    background: color-mix(in srgb, var(--theme-bg-secondary) 60%, transparent);
+    border-color: var(--theme-border);
+  }
+
+  .dark .header-back:hover {
+    background: color-mix(in srgb, var(--theme-primary-light) 12%, var(--theme-bg-secondary));
+  }
+
+   
+  @media (max-width: 768px) {
+    .header-back {
+      font-size: 0.95rem;
+      padding: 0.5rem 0.9rem;
+      gap: 0.5rem;
+    }
+    .header-back-icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header-back {
+      font-size: 0.9rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: 0.5rem;
+    }
+    .header-back-icon {
+      width: 17px;
+      height: 17px;
+    }
+  }
+</style>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      The 7 Stages of a Developer Fixing a Bug
+    </h1>
+    <div class="post-description">
+      Fixing a bug isn’t just about code—it’s an emotional rollercoaster. Discover the 7 stages every developer goes through while debugging.
+    </div>
+    <div class="post-meta"><span title='2025-01-31 00:00:00 +0000 UTC'>Jan 31, 2025</span>&nbsp;·&nbsp;<span>Dominic Minischetti</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="http://localhost:1313/blog/images/posts/the-7-stages-of-a-developer-fixing-a-bug.png" alt="">
+        
+</figure>
+  <div class="post-content"><p>If you’ve ever worked as a developer, you know that <strong>fixing a bug is never just fixing a bug</strong>.</p>
+<p>It’s an <strong>emotional rollercoaster</strong>, a <strong>psychological test</strong>, and sometimes, <strong>a personal attack on your own intelligence</strong>.</p>
+<p>And no matter how many times we do this, it always follows <strong>the same pattern</strong>.</p>
+<hr>
+<h2 id="1-confidence-"><strong>1. Confidence</strong> (<em>&ldquo;This will be easy.&rdquo;</em>)<a hidden class="anchor" aria-hidden="true" href="#1-confidence-">#</a></h2>
+<p>You open the ticket, read the description, and think, <em>Oh, I see what’s happening. I’ll knock this out in 10 minutes.</em></p>
+<p>Maybe you even tell your boss or a teammate:<br>
+<em>&ldquo;I’ll have a fix pushed soon.&rdquo;</em></p>
+<p>(<strong>A fatal mistake.</strong>)</p>
+<p>Every. Single. Time. I convince myself that it’s just a quick fix.<br>
+I even schedule my next coffee break around it.</p>
+<p>It’s like <strong>walking into a trap you built yourself</strong>… but you keep doing it anyway.</p>
+<hr>
+<h2 id="2-confusion-"><strong>2. Confusion</strong> (<em>&ldquo;Wait. What?&rdquo;</em>)<a hidden class="anchor" aria-hidden="true" href="#2-confusion-">#</a></h2>
+<p>You try the <strong>obvious fix</strong>. It doesn’t work.</p>
+<p>You check the logs. <strong>The logs don’t make sense.</strong></p>
+<p>You check the database. <strong>The values should be correct.</strong></p>
+<p>You stare at the code like it <strong>personally betrayed you.</strong></p>
+<p>You read the same line <strong>ten times</strong>, convinced you’re missing something.<br>
+You start <strong>questioning your sanity.</strong></p>
+<p><em>&ldquo;This should work. Why doesn’t it work?&rdquo;</em></p>
+<p>Welcome to the rabbit hole.</p>
+<hr>
+<h2 id="3-denial-"><strong>3. Denial</strong> (<em>&ldquo;This bug shouldn’t even be possible.&rdquo;</em>)<a hidden class="anchor" aria-hidden="true" href="#3-denial-">#</a></h2>
+<p>At this point, you start <strong>questioning reality itself.</strong></p>
+<ul>
+<li><em>This code has been running fine for years. Why is it breaking now?</em></li>
+<li><em>It works locally but not in production. What dark magic is this?</em></li>
+<li><em>Did I introduce this bug? No… no, it can’t be me. Right? RIGHT?</em></li>
+</ul>
+<p>At this point, I start suspecting <strong>cosmic interference.</strong></p>
+<p>Mercury must be in retrograde.<br>
+Maybe the server just hates me.<br>
+Or maybe&hellip; just maybe&hellip;</p>
+<p><strong>The compiler is broken.</strong></p>
+<p>Clearly, <strong>it’s not my fault.</strong></p>
+<p>It <strong>can’t</strong> be.</p>
+<hr>
+<h2 id="4-bargaining-"><strong>4. Bargaining</strong> (<em>&ldquo;What if I just&hellip; add some debug logs?&rdquo;</em>)<a hidden class="anchor" aria-hidden="true" href="#4-bargaining-">#</a></h2>
+<p>You’re lost. Desperate.</p>
+<p>You start throwing in <code>var_dump()</code>, <code>console.log()</code>, and debug prints <strong>like a mad scientist experimenting with electricity.</strong></p>
+<p>I’ve added <strong>so many logs</strong> that my console looked like <strong>the Matrix</strong>.</p>
+<p><em>&ldquo;Maybe if I just add one more debug statement, everything will make sense.&rdquo;</em></p>
+<p>It <strong>never does.</strong></p>
+<p>Nothing makes sense. You add <strong>more logs.</strong><br>
+You <strong>commit to a full-on print statement religion.</strong></p>
+<p>The logs only make things <strong>worse.</strong></p>
+<hr>
+<h2 id="5-anger-"><strong>5. Anger</strong> (<em>&ldquo;WHO WROTE THIS CODE?!&rdquo;</em>)<a hidden class="anchor" aria-hidden="true" href="#5-anger-">#</a></h2>
+<p>You check <code>git blame</code>. You see a name.</p>
+<p>It’s <strong>your name.</strong></p>
+<p>…Oh.</p>
+<p>This is the stage where I briefly consider <strong>quitting tech and becoming a goat farmer.</strong></p>
+<p>Maybe life would be simpler if I just <strong>herded goats.</strong></p>
+<p>Goats <strong>don’t</strong> have bugs.</p>
+<hr>
+<h2 id="6-acceptance-"><strong>6. Acceptance</strong> (<em>&ldquo;Fine. I’ll actually debug this properly.&rdquo;</em>)<a hidden class="anchor" aria-hidden="true" href="#6-acceptance-">#</a></h2>
+<p>You take a deep breath.</p>
+<p>You <strong>go back to the basics</strong>.</p>
+<p>Step through the code. <strong>Check every assumption.</strong><br>
+Slowly, painfully, you start to <strong>understand</strong>.</p>
+<p>You realize you were <strong>overcomplicating things</strong>.<br>
+You stop treating it like a <strong>personal attack</strong> and start treating it like <strong>a problem to solve</strong>.</p>
+<p>And then, after <strong>hours (or days)…</strong></p>
+<p>You <strong>find it.</strong></p>
+<p>The bug.</p>
+<p>Some missing condition. A logic error. A typo.<br>
+Something so <strong>small yet so catastrophic</strong> that you briefly consider quitting tech <strong>again</strong>.</p>
+<p>I’ve lost hours to a <strong>misplaced semicolon</strong>.<br>
+I’ve questioned my <strong>entire career</strong> over a <code>&lt;=</code> that should have been <code>&lt;</code>.</p>
+<p>And in this moment? I feel <strong>both victorious and ashamed.</strong></p>
+<hr>
+<h2 id="7-victory-and-regret-"><strong>7. Victory (and Regret)</strong> (<em>&ldquo;Fixed! …Oh no.&rdquo;</em>)<a hidden class="anchor" aria-hidden="true" href="#7-victory-and-regret-">#</a></h2>
+<p>You push the fix. You celebrate.</p>
+<p>You feel like <strong>a god.</strong></p>
+<p>Then you look at the time and realize:<br>
+<strong>You just spent 6 hours fixing a one-line bug.</strong></p>
+<p>You close the ticket. You move on.<br>
+You tell yourself <strong>it won’t happen again.</strong></p>
+<p>But deep down, you know the truth.</p>
+<p>It <strong>always</strong> happens again.</p>
+<p>Because this is the life we chose.</p>
+<p>The <strong>endless cycle</strong> of <strong>confidence</strong>, <strong>confusion</strong>, <strong>denial</strong>, <strong>bargaining</strong>, <strong>anger</strong>, <strong>acceptance</strong>, and <strong>regret</strong>.</p>
+<p>And honestly?</p>
+<p><strong>I wouldn’t have it any other way.</strong></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/blog/tags/coding-humor/">Coding Humor</a></li>
+      <li><a href="http://localhost:1313/blog/tags/debugging/">Debugging</a></li>
+      <li><a href="http://localhost:1313/blog/tags/developer-life/">Developer Life</a></li>
+      <li><a href="http://localhost:1313/blog/tags/programming/">Programming</a></li>
+      <li><a href="http://localhost:1313/blog/tags/software-development/">Software Development</a></li>
+      <li><a href="http://localhost:1313/blog/tags/tech/">Tech</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/blog/posts/notion-the-external-brain-that-finally-works-for-me/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Notion: The External Brain That Finally Works for Me</span>
+  </a>
+  <a class="next" href="http://localhost:1313/blog/posts/the-multitasking-myth-why-doing-less-makes-you-more-productive/">
+    <span class="title">Next »</span>
+    <br>
+    <span>The Multitasking Myth: Why Doing Less Makes You More Productive</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    <footer class="footer" role="contentinfo">
+  <div class="footer-content">
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        <p>© 2025 <a href="/">Dominic Minischetti</a></p>
+        <p>
+          Building performant, scalable backend systems with precision and care.
+          Crafting fast, reliable PHP solutions since 2012.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer></body>
+
+</html>

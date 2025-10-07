@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Love Notes (and Bugs) in the Silence of Home | Dominic Minischetti</title>
+<meta name="keywords" content="love, relationships, work from home, family, mindset, personal growth">
+<meta name="description" content="A love story told in the quiet moments of working from home together.">
+<meta name="author" content="Dominic Minischetti">
+<link rel="canonical" href="http://localhost:1313/blog/posts/love-notes-and-bugs-in-the-silence-of-home/">
+<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.e695482a811f0055648eaa05f439e0f47325e5631175a9f72f9c124d360ff75b.css" integrity="sha256-5pVIKoEfAFVkjqoF9Dng9HMl5WMRdan3L5wSTTYP91s=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/blog/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/posts/love-notes-and-bugs-in-the-silence-of-home/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+  (function () {
+    const key = "pref-theme";
+    const defaultTheme = "auto";
+    const stored = localStorage.getItem(key);
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const html = document.documentElement;
+    const dark = stored === "dark" || (!stored && (defaultTheme === "dark" || (defaultTheme === "auto" && prefersDark)));
+    html.classList.toggle("dark", dark);
+  })();
+</script>
+
+
+<header class="header" role="banner">
+  <div class="header-inner">
+      
+      <a href="/blog" class="header-back" aria-label="Back to Blog">
+        <svg class="header-back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+        <span class="header-back-text">Back</span>
+      </a>
+
+    
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+
+<script>
+  (function () {
+    const key = "pref-theme";
+    const defaultTheme = "auto";
+    const btn = document.getElementById("theme-toggle");
+    const html = document.documentElement;
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+
+    if (!btn) return;
+
+    const apply = (theme) => {
+      const dark = theme === "dark";
+      html.classList.toggle("dark", dark);
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    };
+
+    const stored = localStorage.getItem(key);
+    const getPref = () => stored || (defaultTheme === "auto" ? (media.matches ? "dark" : "light") : defaultTheme);
+
+    apply(getPref());
+    if (!stored && defaultTheme === "auto") media.addEventListener("change", e => apply(e.matches ? "dark" : "light"));
+    btn.addEventListener("click", () => {
+      const next = html.classList.contains("dark") ? "light" : "dark";
+      apply(next);
+      localStorage.setItem(key, next);
+    });
+  })();
+</script>
+
+<style>
+   
+  .header-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--theme-text);
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius);
+    background: color-mix(in srgb, var(--theme-bg-secondary) 70%, transparent);
+    border: 1px solid var(--theme-border);
+    transition: all 0.2s ease;
+  }
+
+  .header-back:hover {
+    transform: translateX(-4px);
+    color: var(--theme-primary);
+    border-color: var(--theme-primary-light);
+    background: color-mix(in srgb, var(--theme-primary-light) 10%, var(--theme-bg-secondary));
+  }
+
+  .header-back-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .header-back-text {
+    letter-spacing: -0.01em;
+  }
+
+   
+  .dark .header-back {
+    background: color-mix(in srgb, var(--theme-bg-secondary) 60%, transparent);
+    border-color: var(--theme-border);
+  }
+
+  .dark .header-back:hover {
+    background: color-mix(in srgb, var(--theme-primary-light) 12%, var(--theme-bg-secondary));
+  }
+
+   
+  @media (max-width: 768px) {
+    .header-back {
+      font-size: 0.95rem;
+      padding: 0.5rem 0.9rem;
+      gap: 0.5rem;
+    }
+    .header-back-icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header-back {
+      font-size: 0.9rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: 0.5rem;
+    }
+    .header-back-icon {
+      width: 17px;
+      height: 17px;
+    }
+  }
+</style>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Love Notes (and Bugs) in the Silence of Home
+    </h1>
+    <div class="post-description">
+      A love story told in the quiet moments of working from home together.
+    </div>
+    <div class="post-meta"><span title='2025-02-27 00:00:00 +0000 UTC'>Feb 27, 2025</span>&nbsp;·&nbsp;<span>Dominic Minischetti</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="http://localhost:1313/blog/images/posts/love-notes-and-bugs-in-the-silence-of-home.png" alt="">
+        
+</figure>
+  <div class="post-content"><p>I work from home in an <strong>old Brooklyn apartment</strong> with high ceilings, creaky floors, and a history that whispers through the walls.</p>
+<p>Our study is actually our daughter’s bedroom during off-hours, <strong>repurposed as a workspace</strong> where my wife and I sit at separate desks.<br>
+Just enough space to pass between us. Close, but not too close—<strong>perfect for love and concentration.</strong></p>
+<p>She’s studying to become an <strong>elementary school teacher</strong>, headphones on, eyes locked on her screen, so intensely focused that I’m convinced she could ignore a fire drill.<br>
+I’m right beside her, <strong>lost in lines of PHP code</strong>, wrestling with bugs that refuse to die.</p>
+<p>We don’t speak while we work. <strong>Not a word.</strong></p>
+<p>It’s not that we don’t want to.<br>
+It’s that we <strong>can’t afford to.</strong></p>
+<p>Because if I say even a simple <em>&ldquo;Hey&rdquo;</em>, <strong>it’s over.</strong></p>
+<p>Our daughter would appear out of nowhere, demanding to know why <strong>unicorns are magical</strong> or how <strong>rainbows work.</strong><br>
+The baby would start crying, because <strong>chaos loves company.</strong><br>
+And just like that, our fragile focus would shatter into a million pieces.</p>
+<p>So, instead? <strong>We live in silence.</strong></p>
+<hr>
+<h2 id="secret-messages-without-saying-a-word"><strong>Secret Messages (Without Saying a Word)</strong><a hidden class="anchor" aria-hidden="true" href="#secret-messages-without-saying-a-word">#</a></h2>
+<p>Back when we first met at work, we <strong>flirted from separate desks</strong>, sending each other cheeky messages on the company chat.<br>
+We couldn’t talk aloud—professionalism and all—but we found ways to make each other smile.</p>
+<p>Not much has changed. <strong>We still send each other secret notes.</strong></p>
+<p>Except now, they’re digital.</p>
+<p>I’ll text her from two desks away:</p>
+<ul>
+<li><strong>“Did you see the email?”</strong> (<em>Translation: “I miss you.”</em>)</li>
+<li><strong>“What’s for lunch?”</strong> (<em>Translation: “You’re beautiful.”</em>)</li>
+<li><strong>“This bug is killing me.”</strong> (<em>Translation: “I love you.”</em>)</li>
+</ul>
+<p>Our messages are <strong>coded love notes</strong>, little signals in the middle of the workday.<br>
+They keep us connected, even in silence.</p>
+<hr>
+<h2 id="stolen-glances-and-hidden-smiles"><strong>Stolen Glances and Hidden Smiles</strong><a hidden class="anchor" aria-hidden="true" href="#stolen-glances-and-hidden-smiles">#</a></h2>
+<p>I steal glances at her when she’s not looking.</p>
+<p>Her laptop is open, her notes are neatly organized, and she has that look of <strong>fierce determination</strong> that could move mountains.</p>
+<p>She’s beautiful, even when she’s stressed, even when she’s muttering facts under her breath.<br>
+I want to tell her. But I don’t.</p>
+<p>Because if I break the silence? <strong>The whole system collapses.</strong></p>
+<p>We’d lose focus.<br>
+Our daughter would rush in with questions.<br>
+The baby would follow.<br>
+And our carefully structured workday would spiral into <strong>pure chaos.</strong></p>
+<p>So, instead, <strong>I stay silent.</strong><br>
+And somehow, that silence says everything.</p>
+<hr>
+<h2 id="why-this-silence-is-my-favorite-sound"><strong>Why This Silence is My Favorite Sound</strong><a hidden class="anchor" aria-hidden="true" href="#why-this-silence-is-my-favorite-sound">#</a></h2>
+<p>Sometimes, I hate working from home.<br>
+I hate how <strong>work and life blur together</strong>, how emails never stop, how meetings pop up out of nowhere.</p>
+<p>But <strong>I love this.</strong></p>
+<p>I love this strange, quiet dance we do.<br>
+I love the way we communicate without words, how we’re together yet apart.</p>
+<p>I love the way she chews on her pen when she’s thinking, the way she sighs when she’s frustrated, the way she whispers to herself while studying.<br>
+I love every little thing <strong>she doesn’t realize I notice.</strong></p>
+<p>And even though she won’t look up, even though she’s too busy to see me staring—</p>
+<p><strong>I smile.</strong></p>
+<p>Because she’s mine.<br>
+She’s always been mine.<br>
+And in this <strong>shared silence, we’re still falling in love.</strong></p>
+<hr>
+<h2 id="the-invisible-love-story"><strong>The Invisible Love Story</strong><a hidden class="anchor" aria-hidden="true" href="#the-invisible-love-story">#</a></h2>
+<p>This is our life.<br>
+Our love.<br>
+Our silence.</p>
+<p>And I wouldn’t trade it for anything.</p>
+<p>It’s not always perfect. We fight. We get tired. We get stressed.<br>
+But in this space, in this shared silence, <strong>we find each other.</strong></p>
+<p>It’s not about grand gestures. It’s not about dramatic declarations.<br>
+It’s about <strong>the little things.</strong></p>
+<p>It’s the way she hands me my coffee without a word.<br>
+It’s the way I fix her chair without her asking.<br>
+It’s the way we both know when the other needs a break, even if we don’t say it.</p>
+<p>It’s the way <strong>our love speaks in silence.</strong></p>
+<p>And even on the hardest days, even when the baby cries, even when the code breaks—</p>
+<p>I look at her and I know:</p>
+<p><strong>This is exactly where I’m meant to be.</strong></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/blog/tags/love/">Love</a></li>
+      <li><a href="http://localhost:1313/blog/tags/relationships/">Relationships</a></li>
+      <li><a href="http://localhost:1313/blog/tags/work-from-home/">Work From Home</a></li>
+      <li><a href="http://localhost:1313/blog/tags/family/">Family</a></li>
+      <li><a href="http://localhost:1313/blog/tags/mindset/">Mindset</a></li>
+      <li><a href="http://localhost:1313/blog/tags/personal-growth/">Personal Growth</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/blog/posts/logging-out-for-good-why-im-leaving-facebook-and-instagram/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Logging Out for Good: Why I’m Leaving Facebook and Instagram</span>
+  </a>
+  <a class="next" href="http://localhost:1313/blog/posts/notion-the-external-brain-that-finally-works-for-me/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Notion: The External Brain That Finally Works for Me</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    <footer class="footer" role="contentinfo">
+  <div class="footer-content">
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        <p>© 2025 <a href="/">Dominic Minischetti</a></p>
+        <p>
+          Building performant, scalable backend systems with precision and care.
+          Crafting fast, reliable PHP solutions since 2012.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer></body>
+
+</html>
