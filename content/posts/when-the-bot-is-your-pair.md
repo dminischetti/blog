@@ -1,11 +1,12 @@
 ---
 title: "When the Bot Is Your Pair: 7 Team Rituals That Make AI Coding Agents Actually Work"
 link: when-the-bot-is-your-pair
-date: 2025-10-14T00:00:00
+date: 2025-07-06T00:00:00
 description: "Beyond the Copilot demo, what it takes to actually live with an AI pair-programmer in real codebases."
 tags: ["ai", "developer tools", "team practices", "code quality"]
+cover:
+  image: "/blog/images/posts/when-the-bot-is-your-pair.png"
 ---
-
 The first time it worked, it felt like magic.
 
 I typed half a sentence, and the AI filled in the rest, tests, edge cases, even doc comments. Like a dream you didn’t know you had until it showed up in your IDE.

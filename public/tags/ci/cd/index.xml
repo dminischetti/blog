@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ci/Cd on Dominic Minischetti</title>
+    <link>http://localhost:1313/blog/tags/ci/cd/</link>
+    <description>Recent content in Ci/Cd on Dominic Minischetti</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/ci/cd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Branch Your Database, Not Your Luck: How Serverless SQL &#43; Preview DBs Change Shipping</title>
+      <link>http://localhost:1313/blog/posts/branch-your-database-not-your-luck-how-serverless-sql--preview-dbs-change-shipping/</link>
+      <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/branch-your-database-not-your-luck-how-serverless-sql--preview-dbs-change-shipping/</guid>
+      <description>No more staging chaos, flaky QA, or data déjà vu, database branching finally brings dev envs into the modern age.</description>
+    </item>
+  </channel>
+</rss>

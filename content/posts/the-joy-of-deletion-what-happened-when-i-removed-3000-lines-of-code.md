@@ -1,11 +1,12 @@
 ---
 title: "The Joy of Deletion: What Happened When I Removed 3,000 Lines of Code"
 link: the-joy-of-deletion-what-happened-when-i-removed-3000-lines-of-code
-date: 2025-10-14T00:00:00
+date: 2025-11-24T00:00:00
 description: "Sometimes the most meaningful thing you can write... is a blank space."
 tags: ["simplicity", "refactoring", "software philosophy", "developer life"]
+cover:
+  image: "/blog/images/posts/the-joy-of-deletion-what-happened-when-i-removed-3000-lines-of-code.png"
 ---
-
 It didn’t start out as a cleanup.
 
 I was trying to fix a bug, just a small one, buried deep in a feature no one wanted to touch. The logic felt like an archaeological dig: layers of patches, old comments from devs long gone, fallbacks on fallbacks. Every fix had another fix duct-taped on top.

@@ -1,11 +1,12 @@
 ---
 title: "The Silent Commit"
 link: the-silent-commit
-date: 2025-10-14T00:00:00
+date: 2025-09-28T00:00:00
 description: "A love letter to invisible work, those cleanups, tweaks, and tiny decisions that make life better for the next developer, even if no one sees them."
 tags: ["tech", "craft", "ethics", "developer life"]
+cover:
+  image: "/blog/images/posts/the-silent-commit.png"
 ---
-
 You know that kind of commit, the one you push with no ticket linked, no changelog entry, no applause coming. Just a cleaner function name. A useless `else` removed. A comment rewritten to actually make sense. You close the tab and move on, but something about it feels… good.
 
 Not proud-good, not "look what I did" good. Just quietly right. Like putting the knife back in the right drawer. Like sweeping the floor even if no one’s visiting. You do it because it should be done.

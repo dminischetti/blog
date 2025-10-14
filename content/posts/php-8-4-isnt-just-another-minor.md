@@ -1,11 +1,12 @@
 ---
 title: "PHP 8.4 Isn’t Just 'Another Minor': Property Hooks & Asymmetric Visibility for Real Apps"
 link: php-8-4-isnt-just-another-minor
-date: 2025-10-14T00:00:00
+date: 2025-05-01T00:00:00
 description: "How PHP 8.4’s quiet features radically reshape everyday code, and help your models finally behave like themselves."
 tags: ["php", "backend", "language design", "refactoring"]
+cover:
+  image: "/blog/images/posts/php-8-4-isnt-just-another-minor.png"
 ---
-
 You wouldn’t expect a dot-four release to shift how you *think*. But PHP 8.4 did something subtle, it made domain models feel more honest.
 
 I didn’t notice it at first. The headlines were quiet: **property hooks**, **asymmetric visibility**, a few nice bugfixes. No splashy new syntax, no game-changing JIT leap. Just a couple of tools that looked like sugar for edge cases.

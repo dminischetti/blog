@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>The Kindest Apps Are Local-First: CRDTs, Sync Anxiety, and Why SQLite Won 2025 | Dominic Minischetti</title>
+<meta name="keywords" content="local-first, ux, privacy, crdts, sqlite">
+<meta name="description" content="In 2025, building fast feels nice. Building local-first feels humane.">
+<meta name="author" content="Dominic Minischetti">
+<link rel="canonical" href="http://localhost:1313/blog/posts/the-kindest-apps-are-local-first-crdts-sync-anxiety-and-why-sqlite-won-2025/">
+<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.e695482a811f0055648eaa05f439e0f47325e5631175a9f72f9c124d360ff75b.css" integrity="sha256-5pVIKoEfAFVkjqoF9Dng9HMl5WMRdan3L5wSTTYP91s=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/blog/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/posts/the-kindest-apps-are-local-first-crdts-sync-anxiety-and-why-sqlite-won-2025/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+  (function () {
+    const key = "pref-theme";
+    const defaultTheme = "auto";
+    const stored = localStorage.getItem(key);
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const html = document.documentElement;
+    const dark = stored === "dark" || (!stored && (defaultTheme === "dark" || (defaultTheme === "auto" && prefersDark)));
+    html.classList.toggle("dark", dark);
+  })();
+</script>
+
+
+<header class="header" role="banner">
+  <div class="header-inner">
+      
+      <a href="/blog" class="header-back" aria-label="Back to Blog">
+        <svg class="header-back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+        <span class="header-back-text">Back</span>
+      </a>
+
+    
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+
+<script>
+  (function () {
+    const key = "pref-theme";
+    const defaultTheme = "auto";
+    const btn = document.getElementById("theme-toggle");
+    const html = document.documentElement;
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+
+    if (!btn) return;
+
+    const apply = (theme) => {
+      const dark = theme === "dark";
+      html.classList.toggle("dark", dark);
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    };
+
+    const stored = localStorage.getItem(key);
+    const getPref = () => stored || (defaultTheme === "auto" ? (media.matches ? "dark" : "light") : defaultTheme);
+
+    apply(getPref());
+    if (!stored && defaultTheme === "auto") media.addEventListener("change", e => apply(e.matches ? "dark" : "light"));
+    btn.addEventListener("click", () => {
+      const next = html.classList.contains("dark") ? "light" : "dark";
+      apply(next);
+      localStorage.setItem(key, next);
+    });
+  })();
+</script>
+
+<style>
+   
+  .header-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--theme-text);
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius);
+    background: color-mix(in srgb, var(--theme-bg-secondary) 70%, transparent);
+    border: 1px solid var(--theme-border);
+    transition: all 0.2s ease;
+  }
+
+  .header-back:hover {
+    transform: translateX(-4px);
+    color: var(--theme-primary);
+    border-color: var(--theme-primary-light);
+    background: color-mix(in srgb, var(--theme-primary-light) 10%, var(--theme-bg-secondary));
+  }
+
+  .header-back-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .header-back-text {
+    letter-spacing: -0.01em;
+  }
+
+   
+  .dark .header-back {
+    background: color-mix(in srgb, var(--theme-bg-secondary) 60%, transparent);
+    border-color: var(--theme-border);
+  }
+
+  .dark .header-back:hover {
+    background: color-mix(in srgb, var(--theme-primary-light) 12%, var(--theme-bg-secondary));
+  }
+
+   
+  @media (max-width: 768px) {
+    .header-back {
+      font-size: 0.95rem;
+      padding: 0.5rem 0.9rem;
+      gap: 0.5rem;
+    }
+    .header-back-icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header-back {
+      font-size: 0.9rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: 0.5rem;
+    }
+    .header-back-icon {
+      width: 17px;
+      height: 17px;
+    }
+  }
+</style>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      The Kindest Apps Are Local-First: CRDTs, Sync Anxiety, and Why SQLite Won 2025
+    </h1>
+    <div class="post-description">
+      In 2025, building fast feels nice. Building local-first feels humane.
+    </div>
+    <div class="post-meta"><span title='2024-12-14 00:00:00 +0000 UTC'>Dec 14, 2024</span>&nbsp;·&nbsp;<span>Dominic Minischetti</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="http://localhost:1313/blog/images/posts/the-kindest-apps-are-local-first.png" alt="">
+        
+</figure>
+  <div class="post-content"><p>Latency isn&rsquo;t just a performance metric. It’s a posture.</p>
+<p>A sub-100ms response says, <em>“I trust you.”</em> A spinning loader says, <em>“Hold on, we’re asking permission.”</em> And when you’re jotting a note, editing a task, or flipping a toggle on a flaky train ride, that trust, or lack of it, quietly shapes how you feel about the app, and about yourself.</p>
+<p>That’s why I’ve started thinking of <strong>local-first</strong> not as a feature, but as a form of kindness.</p>
+<p>It means you <em>can act immediately</em>. It means your data belongs to you <em>first</em>. And it means the server, when it shows up, is a collaborator, not a gatekeeper.</p>
+<h3 id="crdts-without-panic">CRDTs Without Panic<a hidden class="anchor" aria-hidden="true" href="#crdts-without-panic">#</a></h3>
+<p>The heart of local-first is conflict resolution without drama. CRDTs (conflict-free replicated data types) sound intimidating, but the principle is simple: changes can arrive out of order and still resolve to the same truth.</p>
+<p>Imagine two users editing a checklist offline. One deletes a task, the other marks it complete. When they sync, which one wins? If your app can&rsquo;t answer that, or worse, if <em>users</em> have to, you&rsquo;re asking them to manage state your system should handle.</p>
+<p>CRDTs take that burden. They’re not magic, but they help turn sync anxiety into sync <em>confidence</em>.</p>
+<h3 id="privacy-isnt-a-checkbox">Privacy Isn’t a Checkbox<a hidden class="anchor" aria-hidden="true" href="#privacy-isnt-a-checkbox">#</a></h3>
+<p>Local-first also reshapes the privacy model. What lives on the device stays there. You can compute summaries, analytics, or derived state on the server, but the core data, the raw story of the user’s activity, never needs to leave their hands.</p>
+<p>It’s the difference between storing a diary and analyzing sentiment. The difference between trust and telemetry.</p>
+<h3 id="the-operational-playbook">The Operational Playbook<a hidden class="anchor" aria-hidden="true" href="#the-operational-playbook">#</a></h3>
+<p>Of course, local-first isn’t easy. Schema changes require migration <em>everywhere</em>. You need <strong>merge audits</strong>, diffs that show how a sync resolved conflicts. You need <strong>replay tooling</strong> to test recovery paths. You need visibility into who wrote what, when, and why it resolved the way it did.</p>
+<p>And when things go wrong (because they will), you need to <em>debug timelines</em>, not just logs.</p>
+<p>SQLite has quietly become the backbone of this world. It’s everywhere, in browsers, in apps, in edge functions. Paired with CRDT-backed sync layers, it gives you durability <em>and</em> speed, without reaching for a server unless you really need one.</p>
+<h3 id="where-it-breaks">Where It Breaks<a hidden class="anchor" aria-hidden="true" href="#where-it-breaks">#</a></h3>
+<p>It’s not a silver bullet.</p>
+<p>Media blobs still need cloud storage. Encryption keys need secure coordination. And team-level analytics, anything that depends on a shared global state, gets complicated fast. You can’t just “merge” everyone’s metrics and expect the graph to be meaningful.</p>
+<p>But if your app’s core loop is <em>personal</em>, local-first might be your sharpest, kindest tool.</p>
+<h3 id="a-tiny-experiment">A Tiny Experiment<a hidden class="anchor" aria-hidden="true" href="#a-tiny-experiment">#</a></h3>
+<p>I built two versions of a notes app. One saved directly to Firestore (online-first). The other used local SQLite and CRDT sync on reconnect.</p>
+<p>I measured:</p>
+<ul>
+<li><strong>Time to first action</strong> (from app open to first keystroke)</li>
+<li><strong>Offline recovery success</strong> (how many notes persisted through loss of network)</li>
+</ul>
+<p>Local-first won both, by feel <em>and</em> by numbers. Users typed sooner. Changes synced without panic. I’ll share the repo and traces soon, but the takeaway is already clear:</p>
+<hr>
+<p>We think latency is a UX issue.</p>
+<p>But it’s also a dignity issue.</p>
+<p>Every millisecond says something about who’s in charge, the user, or the infrastructure. And every design choice reflects that.</p>
+<p>The kindest apps say, “You go first. I’ll catch up.”</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/blog/tags/local-first/">Local-First</a></li>
+      <li><a href="http://localhost:1313/blog/tags/ux/">Ux</a></li>
+      <li><a href="http://localhost:1313/blog/tags/privacy/">Privacy</a></li>
+      <li><a href="http://localhost:1313/blog/tags/crdts/">Crdts</a></li>
+      <li><a href="http://localhost:1313/blog/tags/sqlite/">Sqlite</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/blog/posts/the-things-i-learned-staring-at-a-log-at-2-a.m./">
+    <span class="title">« Prev</span>
+    <br>
+    <span>The Things I Learned Staring at a Log at 2 A.M.</span>
+  </a>
+  <a class="next" href="http://localhost:1313/blog/posts/the-file-everyones-afraid-to-touch/">
+    <span class="title">Next »</span>
+    <br>
+    <span>The File Everyone&#39;s Afraid to Touch</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    <footer class="footer" role="contentinfo">
+  <div class="footer-content">
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        <p>© 2025 <a href="/">Dominic Minischetti</a></p>
+        <p>
+          Building performant, scalable backend systems with precision and care.
+          Crafting fast, reliable PHP solutions since 2012.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer></body>
+
+</html>

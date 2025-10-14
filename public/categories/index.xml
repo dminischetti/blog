@@ -6,49 +6,6 @@
     <description>Recent content in Categories on Dominic Minischetti</description>
     <generator>Hugo -- 0.151.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 May 2025 09:30:00 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Digital Culture</title>
-      <link>http://localhost:1313/blog/categories/digital-culture/</link>
-      <pubDate>Thu, 15 May 2025 09:30:00 -0400</pubDate>
-      <guid>http://localhost:1313/blog/categories/digital-culture/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Reflections</title>
-      <link>http://localhost:1313/blog/categories/reflections/</link>
-      <pubDate>Thu, 15 May 2025 09:30:00 -0400</pubDate>
-      <guid>http://localhost:1313/blog/categories/reflections/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Life</title>
-      <link>http://localhost:1313/blog/categories/life/</link>
-      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/categories/life/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tech</title>
-      <link>http://localhost:1313/blog/categories/tech/</link>
-      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/categories/tech/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Productivity</title>
-      <link>http://localhost:1313/blog/categories/productivity/</link>
-      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/categories/productivity/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Workspaces</title>
-      <link>http://localhost:1313/blog/categories/workspaces/</link>
-      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/categories/workspaces/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>

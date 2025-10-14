@@ -6,14 +6,14 @@
     <description>Recent content in Debugging on Dominic Minischetti</description>
     <generator>Hugo -- 0.151.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 29 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/tags/debugging/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>The 7 Stages of a Developer Fixing a Bug</title>
-      <link>http://localhost:1313/blog/posts/the-7-stages-of-a-developer-fixing-a-bug/</link>
-      <pubDate>Fri, 31 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/the-7-stages-of-a-developer-fixing-a-bug/</guid>
-      <description>Fixing a bug isn’t just about code—it’s an emotional rollercoaster. Discover the 7 stages every developer goes through while debugging.</description>
+      <title>The Things I Learned Staring at a Log at 2 A.M.</title>
+      <link>http://localhost:1313/blog/posts/the-things-i-learned-staring-at-a-log-at-2-a.m./</link>
+      <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/the-things-i-learned-staring-at-a-log-at-2-a.m./</guid>
+      <description>A quiet night of debugging that slowly became a conversation with the system, not a battle.</description>
     </item>
   </channel>
 </rss>

@@ -1,11 +1,12 @@
 ---
 title: "When Junior Developers Teach Me the Most"
 link: when-junior-developers-teach-me-the-most
-date: 2025-10-14T00:00:00
+date: 2025-05-22T00:00:00
 description: "A few good questions from someone new can sometimes rewire everything you thought you knew."
 tags: ["tech", "mentorship", "humility", "growth"]
+cover:
+  image: "/blog/images/posts/when-junior-developers-teach-me-the-most.png"
 ---
-
 Wasn’t even a code review, just a regular sync. He was maybe six months in, fresh out of a bootcamp, still a little nervous when talking. But he looked at the logic I had written and asked, “Why do we do it this way?”
 
 And I froze.

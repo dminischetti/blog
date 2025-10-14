@@ -1,11 +1,12 @@
 ---
 title: "Document Your APIs Like You're Explaining Them to Your Kid"
 link: document-your-apis-like-youre-explaining-them-to-your-kid
-date: 2025-10-14T00:00:00
+date: 2025-02-02T00:00:00
 description: "A case for clarity over cleverness in API documentation, because your future self deserves kindness."
 tags: ["api design", "documentation", "clarity", "developer life"]
+cover:
+  image: "/blog/images/posts/document-your-apis-like-youre-explaining-them-to-your-kid.png"
 ---
-
 “Why does it do that?”
 
 She was seven, sitting next to me, asking about a box on my screen labeled `/getUserSettings`.

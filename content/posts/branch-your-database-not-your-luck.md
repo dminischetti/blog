@@ -1,11 +1,12 @@
 ---
 title: "Branch Your Database, Not Your Luck: How Serverless SQL + Preview DBs Change Shipping"
 link: branch-your-database-not-your-luck
-date: 2025-10-14T00:00:00
+date: 2025-03-23T00:00:00
 description: "No more staging chaos, flaky QA, or data déjà vu, database branching finally brings dev envs into the modern age."
 tags: ["databases", "ci/cd", "serverless", "productivity"]
+cover:
+  image: "/blog/images/posts/branch-your-database-not-your-luck.png"
 ---
-
 You haven’t lived staging hell until your bug report gets closed because “it works on *my* seed data.”
 
 We’ve all been there. Shared staging environments, overwritten rows, test users with weird states, migrations colliding mid-QA. The closer you get to release, the more fragile everything feels. And the more often you hear, *“Well it passed locally…”*

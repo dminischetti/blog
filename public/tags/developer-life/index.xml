@@ -6,21 +6,35 @@
     <description>Recent content in Developer Life on Dominic Minischetti</description>
     <generator>Hugo -- 0.151.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/tags/developer-life/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>The 7 Stages of a Developer Fixing a Bug</title>
-      <link>http://localhost:1313/blog/posts/the-7-stages-of-a-developer-fixing-a-bug/</link>
-      <pubDate>Fri, 31 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/the-7-stages-of-a-developer-fixing-a-bug/</guid>
-      <description>Fixing a bug isn’t just about code—it’s an emotional rollercoaster. Discover the 7 stages every developer goes through while debugging.</description>
+      <title>The Silent Commit</title>
+      <link>http://localhost:1313/blog/posts/the-silent-commit/</link>
+      <pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/the-silent-commit/</guid>
+      <description>A love letter to invisible work, those cleanups, tweaks, and tiny decisions that make life better for the next developer, even if no one sees them.</description>
     </item>
     <item>
-      <title>How Every Developer Writes Code (Whether They Admit It or Not)</title>
-      <link>http://localhost:1313/blog/posts/how-every-developer-writes-code-whether-they-admit-it-or-not/</link>
-      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/how-every-developer-writes-code-whether-they-admit-it-or-not/</guid>
-      <description>Coding isn’t as glamorous as it seems. Discover the hilariously relatable stages every developer goes through while writing code.</description>
+      <title>Coding Without a Second Monitor: On Limits, Focus, and Small Screens</title>
+      <link>http://localhost:1313/blog/posts/coding-without-a-second-monitor-on-limits-focus-and-small-screens/</link>
+      <pubDate>Sun, 27 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/coding-without-a-second-monitor-on-limits-focus-and-small-screens/</guid>
+      <description>What if working with less screen space made you a better developer?</description>
+    </item>
+    <item>
+      <title>Document Your APIs Like You&#39;re Explaining Them to Your Kid</title>
+      <link>http://localhost:1313/blog/posts/document-your-apis-like-youre-explaining-them-to-your-kid/</link>
+      <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/document-your-apis-like-youre-explaining-them-to-your-kid/</guid>
+      <description>A case for clarity over cleverness in API documentation, because your future self deserves kindness.</description>
+    </item>
+    <item>
+      <title>Readable Code Is a Love Letter to the Future</title>
+      <link>http://localhost:1313/blog/posts/readable-code-is-a-love-letter-to-the-future/</link>
+      <pubDate>Sun, 22 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/readable-code-is-a-love-letter-to-the-future/</guid>
+      <description>Code isn’t just a technical artifact, it’s a message to someone else’s tired brain.</description>
     </item>
   </channel>
 </rss>

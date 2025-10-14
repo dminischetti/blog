@@ -1,11 +1,12 @@
 ---
 title: "Readable Code Is a Love Letter to the Future"
 link: readable-code-is-a-love-letter-to-the-future
-date: 2025-10-14T00:00:00
+date: 2024-09-22T00:00:00
 description: "Code isn’t just a technical artifact, it’s a message to someone else’s tired brain."
 tags: ["tech", "craft", "ethics", "developer life"]
+cover:
+  image: "/blog/images/posts/readable-code-is-a-love-letter-to-the-future.png"
 ---
-
 You ever read code and feel like someone left the lights on for you?
 
 That happened to me last week, I opened a file I hadn’t touched in months. I was bracing myself, you know, the way you do when walking into a messy garage. But it was... clear. Modular. Named like someone actually cared. And I laughed, because the "someone" was me. Six months ago, me had a good day.

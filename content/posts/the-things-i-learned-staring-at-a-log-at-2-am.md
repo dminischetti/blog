@@ -1,11 +1,12 @@
 ---
 title: "The Things I Learned Staring at a Log at 2 A.M."
 link: the-things-i-learned-staring-at-a-log-at-2-am
-date: 2025-10-14T00:00:00
+date: 2024-12-29T00:00:00
 description: "A quiet night of debugging that slowly became a conversation with the system, not a battle."
 tags: ["life", "tech", "everyday thinking", "debugging"]
+cover:
+  image: "/blog/images/posts/the-things-i-learned-staring-at-a-log-at-2-am.png"
 ---
-
 You know that moment when you’ve tried everything, and the system still won’t budge?
 
 It was 2:04 a.m. The kind of hour when even your thoughts start echoing back at you. I wasn’t supposed to still be working, I had told myself I’d give it thirty more minutes. That was two hours ago. But there I was, staring at the same log line for the fifth time, hoping it would blink first.

@@ -1,11 +1,12 @@
 ---
 title: "Notes Apps Are Becoming Operating Systems"
 link: notes-apps-are-becoming-operating-systems
-date: 2025-10-14T00:00:00
+date: 2025-01-19T00:00:00
 description: "Living inside Notion, Obsidian, and AI for a month made me rethink what 'apps' even are."
 tags: ["tools", "productivity", "future of work", "ai"]
+cover:
+  image: "/blog/images/posts/notes-apps-are-becoming-operating-systems.png"
 ---
-
 At some point last month, I realized I hadn’t opened a “real” app in days.
 
 No calendar app. No separate to-do manager. No Word, no Excel, no IDE even, just a browser, a keyboard, and Notion with GPT whispering in the sidebar. Sometimes Obsidian. Sometimes ChatGPT itself. Always something that blurred the line between note-taking and system-building.

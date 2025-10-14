@@ -1,11 +1,12 @@
 ---
 title: "The File Everyone's Afraid to Touch"
 link: the-file-everyones-afraid-to-touch
-date: 2025-10-14T00:00:00
+date: 2024-11-03T00:00:00
 description: "Legacy code isn’t just old, it’s haunted. But someone has to open the door."
 tags: ["tech", "life", "philosophy", "everyday thinking"]
+cover:
+  image: "/blog/images/posts/the-file-everyones-afraid-to-touch.png"
 ---
-
 You know the file I mean. That one. The one everyone sidesteps in meetings, with names like `legacy_utils.php` or `v2_hackfix_backup_FINAL_v5_REAL.php`. The one that’s always “outside scope,” “due for a rewrite,” or, my favorite, “stable, so let’s not touch it.”
 
 Funny thing is, it’s not the code that scares us. It’s the echoes.

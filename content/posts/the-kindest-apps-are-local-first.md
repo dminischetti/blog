@@ -1,11 +1,12 @@
 ---
 title: "The Kindest Apps Are Local-First: CRDTs, Sync Anxiety, and Why SQLite Won 2025"
 link: the-kindest-apps-are-local-first
-date: 2025-10-14T00:00:00
+date: 2024-12-14T00:00:00
 description: "In 2025, building fast feels nice. Building local-first feels humane."
 tags: ["local-first", "ux", "privacy", "crdts", "sqlite"]
+cover:
+  image: "/blog/images/posts/the-kindest-apps-are-local-first.png"
 ---
-
 Latency isn't just a performance metric. It’s a posture.
 
 A sub-100ms response says, *“I trust you.”* A spinning loader says, *“Hold on, we’re asking permission.”* And when you’re jotting a note, editing a task, or flipping a toggle on a flaky train ride, that trust, or lack of it, quietly shapes how you feel about the app, and about yourself.

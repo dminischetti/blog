@@ -1,11 +1,12 @@
 ---
 title: "When Data Lies Honestly"
 link: when-data-lies-honestly
-date: 2025-10-14T00:00:00
+date: 2025-02-23T00:00:00
 description: "A moment in analysis where the numbers were right, but the question was wrong."
 tags: ["life", "tech", "data", "everyday thinking"]
+cover:
+  image: "/blog/images/posts/when-data-lies-honestly.png"
 ---
-
 You ever stare at a dataset so clean it almost makes you suspicious?
 
 I was working on this internal report, years ago, a clean pull, plenty of rows, the kind of structure that makes your inner developer exhale. The task was simple: find out which section of a local news site was most engaging. Click-through rate, time on page, bounce rate, the usual suspects. 

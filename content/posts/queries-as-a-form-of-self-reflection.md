@@ -1,11 +1,12 @@
 ---
 title: "Queries as a Form of Self-Reflection"
 link: queries-as-a-form-of-self-reflection
-date: 2025-10-14T00:00:00
+date: 2025-01-01T00:00:00
 description: "Every SQL query is a guess about reality, a way of turning uncertainty into something shaped, countable, and sometimes quietly revealing."
 tags: ["life", "tech", "everyday thinking", "data"]
+cover:
+  image: "/blog/images/posts/queries-as-a-form-of-self-reflection.png"
 ---
-
 You know that moment when you write a query, and it doesn’t return what you expected? Not because it’s broken, the syntax is fine, but because it exposes that your understanding of the data, or the world behind it, is off.
 
 That happened to me last week.

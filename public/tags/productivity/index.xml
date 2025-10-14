@@ -6,77 +6,21 @@
     <description>Recent content in Productivity on Dominic Minischetti</description>
     <generator>Hugo -- 0.151.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Best Minimalist Desk Setup for Productivity in 2025 (Remote Work Edition)</title>
-      <link>http://localhost:1313/blog/posts/best-minimalist-desk-setup-for-productivity-in-2025-remote-work-edition/</link>
-      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/best-minimalist-desk-setup-for-productivity-in-2025-remote-work-edition/</guid>
-      <description>Build a distraction-free, minimalist workspace that boosts your productivity in 2025. A witty, smart guide for remote workers, developers, and deep work fanatics.</description>
+      <title>Branch Your Database, Not Your Luck: How Serverless SQL &#43; Preview DBs Change Shipping</title>
+      <link>http://localhost:1313/blog/posts/branch-your-database-not-your-luck-how-serverless-sql--preview-dbs-change-shipping/</link>
+      <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/branch-your-database-not-your-luck-how-serverless-sql--preview-dbs-change-shipping/</guid>
+      <description>No more staging chaos, flaky QA, or data déjà vu, database branching finally brings dev envs into the modern age.</description>
     </item>
     <item>
-      <title>Notion: The External Brain That Finally Works for Me</title>
-      <link>http://localhost:1313/blog/posts/notion-the-external-brain-that-finally-works-for-me/</link>
-      <pubDate>Fri, 07 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/notion-the-external-brain-that-finally-works-for-me/</guid>
-      <description>Struggling to keep track of your ideas and tasks? Discover why Notion is the external brain I never knew I needed.</description>
-    </item>
-    <item>
-      <title>The Multitasking Myth: Why Doing Less Makes You More Productive</title>
-      <link>http://localhost:1313/blog/posts/the-multitasking-myth-why-doing-less-makes-you-more-productive/</link>
-      <pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/the-multitasking-myth-why-doing-less-makes-you-more-productive/</guid>
-      <description>Multitasking is a lie. Discover why single-tasking is the real productivity superpower and how it’s transforming my focus and life.</description>
-    </item>
-    <item>
-      <title>The Productivity Trap: Why Doing More Is Keeping You Stuck</title>
-      <link>http://localhost:1313/blog/posts/the-productivity-trap-why-doing-more-is-keeping-you-stuck/</link>
-      <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/the-productivity-trap-why-doing-more-is-keeping-you-stuck/</guid>
-      <description>Productivity isn’t about doing more—it’s about doing what matters. Discover how to escape the productivity trap and find real progress.</description>
-    </item>
-    <item>
-      <title>Why I, a Programmer, Still Use Paper Like It’s 1999</title>
-      <link>http://localhost:1313/blog/posts/why-i-a-programmer-still-use-paper-like-its-1999/</link>
-      <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/why-i-a-programmer-still-use-paper-like-its-1999/</guid>
-      <description>Digital tools are powerful, but when it comes to problem-solving, nothing beats paper. Here’s why I, a programmer, still use analog methods.</description>
-    </item>
-    <item>
-      <title>The Never-Ending Search for the Perfect App: Why I Can’t Stop Downloading</title>
-      <link>http://localhost:1313/blog/posts/the-never-ending-search-for-the-perfect-app-why-i-cant-stop-downloading/</link>
-      <pubDate>Fri, 13 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/the-never-ending-search-for-the-perfect-app-why-i-cant-stop-downloading/</guid>
-      <description>Obsessed with finding the perfect app? You’re not alone. Join me on my endless quest for the ultimate productivity tools.</description>
-    </item>
-    <item>
-      <title>The Pursuit of the Perfect: My Quest for the Ultimate Everything</title>
-      <link>http://localhost:1313/blog/posts/the-pursuit-of-the-perfect-my-quest-for-the-ultimate-everything/</link>
-      <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/the-pursuit-of-the-perfect-my-quest-for-the-ultimate-everything/</guid>
-      <description>Minimalism taken to the next level—finding the one perfect item for everything. Discover my quest for ultimate efficiency and portability.</description>
-    </item>
-    <item>
-      <title>How I Outsmart My Own Brain to Get Things Done</title>
-      <link>http://localhost:1313/blog/posts/how-i-outsmart-my-own-brain-to-get-things-done/</link>
-      <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/how-i-outsmart-my-own-brain-to-get-things-done/</guid>
-      <description>Life feels like an action movie with no pause button. Here&amp;#39;s how I handle the chaos and still get things done.</description>
-    </item>
-    <item>
-      <title>The Browser Wars: My Exhausting Journey to Finding the Least Annoying Setup</title>
-      <link>http://localhost:1313/blog/posts/the-browser-wars-my-exhausting-journey-to-finding-the-least-annoying-setup/</link>
-      <pubDate>Fri, 22 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/the-browser-wars-my-exhausting-journey-to-finding-the-least-annoying-setup/</guid>
-      <description>Choosing a browser shouldn&amp;#39;t be this hard. From Safari’s WebKit prison to Windows’ Chromium clones, here’s my exhausting browser journey.</description>
-    </item>
-    <item>
-      <title>The Motivation Myth: Why Waiting to Feel Inspired Will Keep You Stuck</title>
-      <link>http://localhost:1313/blog/posts/the-motivation-myth-why-waiting-to-feel-inspired-will-keep-you-stuck/</link>
-      <pubDate>Fri, 08 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/the-motivation-myth-why-waiting-to-feel-inspired-will-keep-you-stuck/</guid>
-      <description>Motivation is a lie. Discover why waiting to feel inspired keeps you stuck and learn practical strategies to take action anyway.</description>
+      <title>Notes Apps Are Becoming Operating Systems</title>
+      <link>http://localhost:1313/blog/posts/notes-apps-are-becoming-operating-systems/</link>
+      <pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/notes-apps-are-becoming-operating-systems/</guid>
+      <description>Living inside Notion, Obsidian, and AI for a month made me rethink what &amp;#39;apps&amp;#39; even are.</description>
     </item>
   </channel>
 </rss>

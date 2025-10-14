@@ -1,11 +1,12 @@
 ---
 title: "Coding Without a Second Monitor: On Limits, Focus, and Small Screens"
 link: coding-without-a-second-monitor
-date: 2025-10-14T00:00:00
+date: 2025-07-27T00:00:00
 description: "What if working with less screen space made you a better developer?"
 tags: ["minimalism", "focus", "developer life", "tools"]
+cover:
+  image: "/blog/images/posts/coding-without-a-second-monitor.png"
 ---
-
 Most people assume I’m joking when I say I code on a 14-inch laptop with no external monitor.
 
 Then they see my setup, one screen, a split terminal, and Vim, and they ask how I survive.

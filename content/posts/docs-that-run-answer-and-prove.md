@@ -1,11 +1,12 @@
 ---
 title: "Docs That Run, Answer, and Prove: Turning Documentation into a Living Interface"
 link: docs-that-run-answer-and-prove
-date: 2025-10-14T00:00:00
+date: 2025-04-27T00:00:00
 description: "What happens when docs stop describing the product and start behaving like part of it."
 tags: ["documentation", "dx", "testing", "ai"]
+cover:
+  image: "/blog/images/posts/docs-that-run-answer-and-prove.png"
 ---
-
 I opened the integration guide to fix a minor typo and realized the steps didn’t work anymore.
 
 Nothing dramatic, just drift. A renamed flag here, a new default there, a missing permission no one remembered to mention. The words were still pretty. The reality had moved on. That’s the quiet failure of static docs, they age in place while the system keeps walking.

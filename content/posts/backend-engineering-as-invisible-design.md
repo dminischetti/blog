@@ -1,11 +1,12 @@
 ---
 title: "Backend Engineering as Invisible Design"
 link: backend-engineering-as-invisible-design
-date: 2025-10-14T00:00:00
+date: 2025-04-06T00:00:00
 description: "The user never sees your code, but they feel every millisecond of it."
 tags: ["backend", "ux", "design", "product thinking"]
+cover:
+  image: "/blog/images/posts/backend-engineering-as-invisible-design.png"
 ---
-
 You can spend a whole week rewriting a query, and nobody notices.
 
 At least, that’s how it feels at first.

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ai on Dominic Minischetti</title>
+    <link>http://localhost:1313/blog/tags/ai/</link>
+    <description>Recent content in Ai on Dominic Minischetti</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>When the Bot Is Your Pair: 7 Team Rituals That Make AI Coding Agents Actually Work</title>
+      <link>http://localhost:1313/blog/posts/when-the-bot-is-your-pair-7-team-rituals-that-make-ai-coding-agents-actually-work/</link>
+      <pubDate>Sun, 06 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/when-the-bot-is-your-pair-7-team-rituals-that-make-ai-coding-agents-actually-work/</guid>
+      <description>Beyond the Copilot demo, what it takes to actually live with an AI pair-programmer in real codebases.</description>
+    </item>
+    <item>
+      <title>Docs That Run, Answer, and Prove: Turning Documentation into a Living Interface</title>
+      <link>http://localhost:1313/blog/posts/docs-that-run-answer-and-prove-turning-documentation-into-a-living-interface/</link>
+      <pubDate>Sun, 27 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/docs-that-run-answer-and-prove-turning-documentation-into-a-living-interface/</guid>
+      <description>What happens when docs stop describing the product and start behaving like part of it.</description>
+    </item>
+    <item>
+      <title>Notes Apps Are Becoming Operating Systems</title>
+      <link>http://localhost:1313/blog/posts/notes-apps-are-becoming-operating-systems/</link>
+      <pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/notes-apps-are-becoming-operating-systems/</guid>
+      <description>Living inside Notion, Obsidian, and AI for a month made me rethink what &amp;#39;apps&amp;#39; even are.</description>
+    </item>
+  </channel>
+</rss>

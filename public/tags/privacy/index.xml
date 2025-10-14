@@ -6,14 +6,14 @@
     <description>Recent content in Privacy on Dominic Minischetti</description>
     <generator>Hugo -- 0.151.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/tags/privacy/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Your Phone Isn’t Spying — But the Truth Is Worse</title>
-      <link>http://localhost:1313/blog/posts/your-phone-isnt-spying-but-the-truth-is-worse/</link>
-      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/your-phone-isnt-spying-but-the-truth-is-worse/</guid>
-      <description>Think your phone is listening? Think again. Learn how data tracking, predictive algorithms, and behavioral profiling truly work — and why it&amp;#39;s way creepier than spying.</description>
+      <title>The Kindest Apps Are Local-First: CRDTs, Sync Anxiety, and Why SQLite Won 2025</title>
+      <link>http://localhost:1313/blog/posts/the-kindest-apps-are-local-first-crdts-sync-anxiety-and-why-sqlite-won-2025/</link>
+      <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/the-kindest-apps-are-local-first-crdts-sync-anxiety-and-why-sqlite-won-2025/</guid>
+      <description>In 2025, building fast feels nice. Building local-first feels humane.</description>
     </item>
   </channel>
 </rss>

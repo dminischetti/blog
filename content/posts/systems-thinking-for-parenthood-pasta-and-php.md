@@ -1,11 +1,12 @@
 ---
 title: "Systems Thinking for Parenthood, Pasta, and PHP"
 link: systems-thinking-for-parenthood-pasta-and-php
-date: 2025-10-14T00:00:00
+date: 2024-10-20T00:00:00
 description: "Turns out the way you debug your code might look a lot like how you raise your kid or cook your dinner."
 tags: ["life", "philosophy", "parenthood", "systems thinking"]
+cover:
+  image: "/blog/images/posts/systems-thinking-for-parenthood-pasta-and-php.png"
 ---
-
 I used to think systems thinking was just for software.
 
 Dependency graphs, input/output, feedback loops, all that neat mental architecture we use to design clean, resilient code. But lately, I’ve started seeing it everywhere. In how I raise my kids. In how I boil pasta. In how I manage mornings without losing my mind.
