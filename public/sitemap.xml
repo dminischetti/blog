@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/posts/</loc>
+    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/blog/tags/craft/</loc>
     <lastmod>2025-09-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/tags/developer-life/</loc>
     <lastmod>2025-09-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2025-09-28T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/blog/tags/ethics/</loc>
-    <lastmod>2025-09-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/posts/</loc>
     <lastmod>2025-09-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/tags/</loc>
@@ -191,9 +191,5 @@
     <loc>http://localhost:1313/blog/archives/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/categories/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/tags/simplicity/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/tags/software-philosophy/</loc>
   </url>
 </urlset>
