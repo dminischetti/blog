@@ -81,7 +81,7 @@ params:
   TocOpen: false
 
   # --- Custom CSS/JS (optional hooks) ---
-  customCSS: ["css/custom.css"]
+  customCSS: ["css/post-entry.css"]
   customJS: []
 
 # --- Markdown Rendering Options ---
