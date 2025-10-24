@@ -1,0 +1,17 @@
+[33meac971b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge pull request #2 from dminischetti/codex/restyle-hugo-papermod-theme-to-emulate-reference-css
+[33m21375b8[m Restyle PaperMod theme with new reference skin
+[33mf39e40d[m Merge pull request #1 from dminischetti/codex/enhance-design-of-hugo-papermod-site
+[33m09b3d19[m Refine PaperMod styling with elevated surfaces
+[33m962e524[m asd
+[33maf945df[m Update footer text for clarity and accuracy
+[33m91fe9e6[m Update stylesheet links across multiple tag pages and add .gitignore for public directory
+[33m89fbef8[m Update code background color across multiple HTML files to enhance readability
+[33m6364b43[m Folder moved
+[33m9f1db0b[m Add new blog posts on documentation, coding practices, and personal reflections
+[33mffa23dc[m Refactor code structure for improved readability and maintainability
+[33mde79704[m Refactor skill tags and comment out contact info section in index.html
+[33m853fcf5[m Remove 'primary' class from skill tags for consistent styling
+[33m865536d[m Fix JSON-LD structure by removing unnecessary line breaks in address object
+[33mf326886[m Refactor GitHub Actions workflow for Hugo site deployment - Added a blank line for better readability - Fixed indentation in the Install Hugo CLI step - Updated artifact upload path from './_site' to './public'
+[33mb5aa4b7[m Add PaperMod theme as a submodule
+[33m1995003[m Initialize Hugo site with configuration files and default archetypes

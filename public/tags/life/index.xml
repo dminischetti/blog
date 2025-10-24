@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Life on Dominic Minischetti</title>
+    <link>http://localhost:1313/blog/tags/life/</link>
+    <description>Recent content in Life on Dominic Minischetti</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/life/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>When Data Lies Honestly</title>
+      <link>http://localhost:1313/blog/posts/when-data-lies-honestly/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/when-data-lies-honestly/</guid>
+      <description>A moment in analysis where the numbers were right, but the question was wrong.</description>
+    </item>
+    <item>
+      <title>Queries as a Form of Self-Reflection</title>
+      <link>http://localhost:1313/blog/posts/queries-as-a-form-of-self-reflection/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/queries-as-a-form-of-self-reflection/</guid>
+      <description>Every SQL query is a guess about reality, a way of turning uncertainty into something shaped, countable, and sometimes quietly revealing.</description>
+    </item>
+    <item>
+      <title>The Things I Learned Staring at a Log at 2 A.M.</title>
+      <link>http://localhost:1313/blog/posts/the-things-i-learned-staring-at-a-log-at-2-a.m./</link>
+      <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/the-things-i-learned-staring-at-a-log-at-2-a.m./</guid>
+      <description>A quiet night of debugging that slowly became a conversation with the system, not a battle.</description>
+    </item>
+    <item>
+      <title>The File Everyone&#39;s Afraid to Touch</title>
+      <link>http://localhost:1313/blog/posts/the-file-everyones-afraid-to-touch/</link>
+      <pubDate>Sun, 03 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/the-file-everyones-afraid-to-touch/</guid>
+      <description>Legacy code isn’t just old, it’s haunted. But someone has to open the door.</description>
+    </item>
+    <item>
+      <title>Systems Thinking for Parenthood, Pasta, and PHP</title>
+      <link>http://localhost:1313/blog/posts/systems-thinking-for-parenthood-pasta-and-php/</link>
+      <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/systems-thinking-for-parenthood-pasta-and-php/</guid>
+      <description>Turns out the way you debug your code might look a lot like how you raise your kid or cook your dinner.</description>
+    </item>
+  </channel>
+</rss>
