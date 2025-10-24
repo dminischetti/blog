@@ -2,8 +2,8 @@
    GLOBAL VARIABLES — LIGHT & DARK THEMES
    ========================================================================== */
 :root {
-  --theme-bg: #1e40af;            /* page background */
-  --theme-bg-secondary: #1e40af;  /* cards, footer background */
+  --theme-bg: #ffffff;
+  --theme-bg-secondary: #f8fafc;
   --theme-text: #0f172a;
   --theme-text-secondary: #475569;
   --theme-border: #e2e8f0;
@@ -21,7 +21,7 @@
   --theme-bg-secondary: #1e293b;
   --theme-text: #f1f5f9;
   --theme-text-secondary: #cbd5e1;
-  --theme-border: #ffffff;
+  --theme-border: #334155;
   --theme-primary: #3b82f6;
   --theme-primary-light: #60a5fa;
   --theme-gradient: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
@@ -320,5 +320,5 @@ main blockquote {
 }
 
 .list {
-    background: var(--theme-bg);
+    background: var(--code-bg);
 }
