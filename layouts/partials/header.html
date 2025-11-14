@@ -1,0 +1,137 @@
+{{- /* layouts/partials/header.html (PaperMod override, menu semplificato) */ -}}
+{{- $base := "/" | relURL -}}
+{{- $blogIndex := "/blog" | relURL -}}
+{{- $isBlog := strings.HasPrefix .RelPermalink "/blog" -}}
+{{- $isBlogPost := and $isBlog (ne .RelPermalink $blogIndex) (ne .RelPermalink (printf "%s/" $blogIndex)) -}}
+
+<header class="header" role="banner">
+  <div class="container">
+    <div class="header-content">
+      <a href="{{ $base }}" class="logo" aria-label="Dominic Minischetti Home">
+        <span class="logo-icon" aria-hidden="true">DM</span>
+        <span>Dominic Minischetti</span>
+      </a>
+
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        {{- if $isBlogPost -}}
+          <a href="{{ $base }}" class="nav-link">Home</a>
+          <span class="nav-separator">/</span>
+          <a href="{{ $blogIndex }}" class="header-cta">Posts →</a>
+        {{- else -}}
+          <a href="{{ $base }}" class="header-cta{{ if not $isBlog }} active{{ end }}">Home →</a>
+        {{- end -}}
+      </nav>
+
+      <button class="mobile-toggle" onclick="DMNav.toggleMobile()" aria-label="Toggle navigation" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-overlay" id="mobileOverlay" onclick="DMNav.toggleMobile()" aria-hidden="true"></div>
+
+<nav class="mobile-nav" id="mobileNav" role="navigation" aria-label="Mobile navigation" aria-hidden="true">
+  <div class="mobile-nav-header">
+    <span class="logo">Menu</span>
+    <button onclick="DMNav.toggleMobile()" aria-label="Close navigation">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+  </div>
+
+  <a href="{{ $base }}" class="mobile-nav-link{{ if not $isBlog }} active{{ end }}" onclick="DMNav.toggleMobile()">Home</a>
+  {{- if $isBlogPost -}}
+    <a href="{{ $blogIndex }}" class="mobile-nav-link" onclick="DMNav.toggleMobile()">All Posts</a>
+  {{- end -}}
+  <a href="#" class="mobile-nav-link" onclick="DMToggle.toggle(); return false;">Toggle dark mode</a>
+</nav>
+
+<button class="theme-toggle" id="themeToggle" onclick="DMToggle.toggle()" aria-label="Toggle dark mode">
+  <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <circle cx="12" cy="12" r="5" />
+    <path d="M12 1v6M12 17v6M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h6M17 12h6M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+  </svg>
+  <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+  </svg>
+</button>
+
+<script>
+const DMToggle = {
+  key: "pref-theme",
+  init() {
+    const saved = localStorage.getItem(this.key);
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const theme = saved || (prefersDark ? "dark" : "light");
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    document.documentElement.setAttribute("data-theme", theme);
+  },
+  toggle() {
+    const current = document.documentElement.classList.contains("dark") ? "dark" : "light";
+    const next = current === "dark" ? "light" : "dark";
+    document.documentElement.classList.toggle("dark", next === "dark");
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem(this.key, next);
+  }
+};
+
+const DMNav = {
+  toggleMobile() {
+    const nav = document.getElementById("mobileNav");
+    const ovl = document.getElementById("mobileOverlay");
+    const btn = document.querySelector(".mobile-toggle");
+    const open = !nav.classList.contains("open");
+    nav.classList.toggle("open", open);
+    ovl.classList.toggle("open", open);
+    document.body.style.overflow = open ? "hidden" : "";
+    nav.setAttribute("aria-hidden", open ? "false" : "true");
+    ovl.setAttribute("aria-hidden", open ? "false" : "true");
+    btn && btn.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+};
+
+DMToggle.init();
+</script>
+
+<style>
+:root { --c-primary: #1e40af; --c-primary-light: #3b82f6; --c-text: #0f172a; --c-text-secondary: #64748b; --c-bg: #ffffff; --c-bg-secondary: #f8fafc; --c-border: #e2e8f0; --radius: .625rem; --shadow: 0 4px 6px -1px rgb(0 0 0 / .1), 0 2px 4px -2px rgb(0 0 0 / .1); --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1); --trans-fast: 150ms cubic-bezier(.4,0,.2,1); }
+html.dark, [data-theme="dark"] { --c-text:#f1f5f9; --c-text-secondary:#cbd5e1; --c-bg:#0f172a; --c-bg-secondary:#1e293b; --c-border:#334155; }
+.container { margin-inline:auto; max-width:1200px; padding-inline:1.5rem; width:100%; }
+.header { position:fixed; top:0; left:0; right:0; z-index:100; backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); background: rgba(255,255,255,.85); border-bottom:1px solid var(--c-border); transition: box-shadow var(--trans-fast), background var(--trans-fast); }
+html.dark .header, [data-theme="dark"] .header { background: rgba(15,23,42,.85); }
+.header.scrolled { box-shadow: var(--shadow); }
+.header-content { display:flex; align-items:center; justify-content:space-between; min-height:70px; padding-block:1rem; width:100%; position: relative;}
+.logo { display:flex; align-items:center; gap:.5rem; font-weight:800; color:var(--c-text); text-decoration:none; }
+.logo-icon { width:36px; height:36px; display:grid; place-items:center; color:#fff; border-radius:var(--radius); background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%); font-weight:800; font-size:.9rem; }
+.nav{ position:absolute; right:1.5rem; top:50%; transform:translateY(-50%); margin-left:0; display:flex; align-items:center; gap:0.75rem; }
+@media (max-width:768px){ .nav{ display:none; } }
+.nav-link { color:var(--c-text-secondary); font-size:.95rem; text-decoration:none; position:relative; padding:.25rem 0; transition:color var(--trans-fast); }
+.nav-link:hover, .nav-link.active { color:var(--c-primary); }
+.nav-separator { color:var(--c-text-secondary); font-size:.95rem; user-select: none; }
+.nav-link::after { content:''; position:absolute; left:0; right:auto; bottom:-2px; height:2px; width:0; background: linear-gradient(135deg, #1e40af, #3b82f6); transition:width var(--trans-fast); }
+.nav-link:hover::after, .nav-link.active::after { width:100%; }
+.header-cta { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 16px; border-radius: var(--radius); background: linear-gradient(135deg,#1e40af,#3b82f6); color: #fff; font-weight: 600; font-size: 16px; text-decoration: none; line-height: 1.2; white-space: nowrap; box-shadow: var(--shadow); transition: all var(--trans-fast); vertical-align: middle; }
+.header-cta:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); color: #fff; }
+.mobile-toggle { display:none; background:none; border:0; color:var(--c-text); min-width:44px; min-height:44px; padding:.25rem; }
+.mobile-toggle svg { width:24px; height:24px; }
+.mobile-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.5); opacity:0; transition:opacity var(--trans-fast); z-index:999; }
+.mobile-overlay.open { display:block; opacity:1; }
+.mobile-nav { position:fixed; right:0; top:0; width:85%; max-width:350px; height:100dvh; background:var(--c-bg); box-shadow:0 25px 50px -12px rgb(0 0 0 / .25); transform:translateX(100%); opacity:0; pointer-events:none; transition:transform var(--trans-fast), opacity var(--trans-fast); z-index:1000; padding:1.25rem; overflow-y:auto; }
+.mobile-nav.open { transform:translateX(0); opacity:1; pointer-events:auto; }
+.mobile-nav-header { display:flex; align-items:center; justify-content:space-between; padding-bottom:1rem; margin-bottom:1rem; border-bottom:1px solid var(--c-border); }
+.mobile-nav-link { display:block; padding:1rem 0; border-bottom:1px solid var(--c-border); color:var(--c-text); text-decoration:none; font-size:1.1rem; transition: all var(--trans-fast); }
+.mobile-nav-link:hover { color:var(--c-primary); transform:translateX(4px); }
+.theme-toggle { position:fixed; right:1.5rem; top:1.5rem; z-index:200; width:52px; height:52px; display:flex; align-items:center; justify-content:center; background:var(--c-bg); border:2px solid var(--c-border); border-radius:9999px; box-shadow:var(--shadow); cursor:pointer; transition:transform var(--trans-fast), border-color var(--trans-fast); }
+.theme-toggle:hover { border-color:var(--c-primary); transform:scale(1.06) rotate(180deg); }
+.theme-toggle .moon-icon { display:none; }
+html.dark .theme-toggle .sun-icon, [data-theme="dark"] .theme-toggle .sun-icon { display:none; }
+html.dark .theme-toggle .moon-icon, [data-theme="dark"] .theme-toggle .moon-icon { display:block; }
+@media (max-width: 768px) { .nav { display:none; } .mobile-toggle { display:block; } .theme-toggle { display:none; } }
+</style>
